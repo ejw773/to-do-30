@@ -1,13 +1,15 @@
 import React from 'react';
-import Card from 'react-bootstrap/Card';
+import RenderCards from './RenderCardsComponent';
+import projectInfo from '../shared/projectInfo'
 
-const ProjectCard = ({item}) => {
+const ProjectCard = () => {
+    const renderCards = projectInfo.map((item) => 
+        <RenderCards key={item.day} title={item.title} link={item.link} day={item.day}/>
+    );
     return (
-        <Card>
-            <Card.Body>
-                <Card.Title>{item.title}</Card.Title>
-            </Card.Body>
-        </Card>
+        <ul>
+            {renderCards}
+        </ul>
     )
 }
 

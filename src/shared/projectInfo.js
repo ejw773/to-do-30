@@ -1,4 +1,4 @@
-const projects = [
+const projectInfo = [
     {
         day: 1,
         title: 'Finished Before Breakfast',
@@ -11,4 +11,4 @@ const projects = [
     }
 ];
 
-export default projects;
+export default projectInfo;
