@@ -2,9 +2,9 @@
 
 The "To Do App" is the classic exercise in learning web development. This challenge is to create 30 separate To Do apps, with only one day to create each one. It is not necessarily intended to be completed within a consecutive 30 days. If you do all 30 within 2 months, give yourself a round of applause!
 
-# Today's Deployed App: [Put Link to Deployed Site Here](https://elijahwilcott.com/)
+## Today's Deployed App: [Put Link to Deployed Site Here](https://elijahwilcott.com/)
 
-## The Rules
+### The Rules
 
 * Each day of participation, start the day by creating a new branch for that day. Example: `todo01`
 
@@ -22,6 +22,6 @@ The "To Do App" is the classic exercise in learning web development. This challe
 
 * Don't quit.
 
-## That's It!
+### That's It!
 
 Add as many or as few features as wanted. Redux? Sure. Backend? Great. Awesome styling? Awesome. Unit tests? Try it. Nothing but a barely functional frontend? Some days will be like that. Don't let them stop you.
