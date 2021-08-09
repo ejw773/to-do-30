@@ -1,11 +1,20 @@
 import React from 'react';
+import RenderListItems from './RenderListItemsComponent';
 
-const ItemList = () => {
+const ItemList = ({allToDos}) => {
+    console.log(allToDos)
     return (
         <div>
-            <h2>Item List</h2>
+            {allToDos.map((toDo, index) => {
+                return (
+                    <div key={index}>
+                        <h3>{toDo}</h3>
+                    </div>
+                )
+            })}
         </div>
     )
+
 }
 
 export default ItemList;

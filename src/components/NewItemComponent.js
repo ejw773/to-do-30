@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const NewItem = () => {
+const NewItem = ({addToDo}) => {
+    const [ userInput, setUserInput ] = useState('');
+    const handleChange = (e) => {
+        setUserInput(e.currentTarget.value)
+    }
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        addToDo(userInput);
+        setUserInput('');
+    }
     return (
         <div>
-            <h2>New Item</h2>
+            <input value={userInput} type="text" onChange={handleChange} placeholder="Enter task..." />
+            <button onClick={handleSubmit}> + </button>
         </div>
     )
 }
