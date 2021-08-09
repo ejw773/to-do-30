@@ -12,15 +12,13 @@ The "To Do App" is the classic exercise in learning web development. This challe
 
 * By the end of the day, make the final commit and deploy the app. If deployment can't be completed on that day, that's OK - *but no more commits after midnight*.
 
-* Put a link to your deployed site in the README.
-
-* Don't quit.
-
-* Optional: Somewhere on the site or README, give that day's app a name or descriptive label. Examples:
+* Put a link to your deployed site in the README for that branch (edit the "Today's Deployed App" line above). Give the link a title. Examples:
   *   "Finished before breakfast! BAM!"
   *   "Utilizes Unit Testing"
   *   "Worst one so far - next one will be better"
   *   "Learned some new styling tricks!"
+
+* Don't quit.
 
 ## That's It!
 
