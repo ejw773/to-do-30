@@ -6,11 +6,19 @@ The "To Do App" is the classic exercise in learning web development. This challe
 
 * Each day of participation, start the day by creating a new branch for that day. Example: to-do-01
 
-* By the end of the day, make the final commit and deploy the app. If deployment can't be completed on that day, that's OK - *but no more commits after midnight*.
-
 * No copy / paste.
 
+* By the end of the day, make the final commit and deploy the app. If deployment can't be completed on that day, that's OK - *but no more commits after midnight*.
+
+* Put a link to your deployed site in the README.
+
 * Don't quit.
+
+* Optional: Somewhere on the site or README, give that day's app a name or descriptive label. Examples:
+*   "Finished before breakfast! BAM!"
+*   "Utilizes Unit Testing"
+*   "Worst one so far - maybe next time"
+*   "Learned some new styling tricks!"
 
 ## That's It!
 
