@@ -6,7 +6,7 @@ The "To Do App" is the classic exercise in learning web development. This challe
 
 ## The Rules
 
-* Each day of participation, start the day by creating a new branch for that day. Example: todo01
+* Each day of participation, start the day by creating a new branch for that day. Example: `todo01`
 
 * No copy / paste.
 
