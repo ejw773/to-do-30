@@ -1,4 +1,4 @@
-# To-Do-30
+# To-Do 30
 
 The "To Do App" is the classic exercise in learning web development. This challenge is to create 30 separate To Do apps, with only one day to create each one. It is not necessarily intended to be completed within a consecutive 30 days. If you do all 30 within 2 months, give yourself a round of applause!
 
