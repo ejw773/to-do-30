@@ -15,10 +15,10 @@ The "To Do App" is the classic exercise in learning web development. This challe
 * Don't quit.
 
 * Optional: Somewhere on the site or README, give that day's app a name or descriptive label. Examples:
-*   "Finished before breakfast! BAM!"
-*   "Utilizes Unit Testing"
-*   "Worst one so far - maybe next time"
-*   "Learned some new styling tricks!"
+  *   "Finished before breakfast! BAM!"
+  *   "Utilizes Unit Testing"
+  *   "Worst one so far - maybe next time"
+  *   "Learned some new styling tricks!"
 
 ## That's It!
 
