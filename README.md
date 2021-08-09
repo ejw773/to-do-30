@@ -24,4 +24,4 @@ The "To Do App" is the classic exercise in learning web development. This challe
 
 ## That's It!
 
-Add as many or as few features as wanted. Redux? Sure. Backend? Great. Awesome styling? Awesome. Unit tests? Try it. Nothing but a barely functional frontend? Some days will be like that.
+Add as many or as few features as wanted. Redux? Sure. Backend? Great. Awesome styling? Awesome. Unit tests? Try it. Nothing but a barely functional frontend? Some days will be like that. Don't let them stop you.
