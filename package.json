@@ -23,6 +23,7 @@
       "react-app/jest"
     ]
   },
+  "homepage": "https://todo.elijahwilcott.com/01/",
   "browserslist": {
     "production": [
       ">0.2%",
