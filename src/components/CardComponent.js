@@ -1,6 +1,6 @@
 import React from 'react';
 import RenderCards from './RenderCardsComponent';
-import projectInfo from '../shared/projectInfo'
+import projectInfo from '../shared/projectInfo';
 
 const ProjectCard = () => {
     const renderCards = projectInfo.map((item) => 
