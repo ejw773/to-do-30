@@ -5,7 +5,7 @@ const projectInfo = [
     },
     {
         day: 2,
-        title: 'TBD'
+        title: 'React-Bootstrap'
     },
     {
         day: 3,
