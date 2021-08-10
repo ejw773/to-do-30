@@ -12,8 +12,10 @@ const NewItem = ({addTask}) => {
         setFormInput(newInput)
     }
     const handleClick = () => {
-        addTask(formInput);
-        setFormInput('')
+        if (formInput !== '') {
+            addTask(formInput);
+            setFormInput('')
+        }
     }
     return (
         <div className='m-3'>
@@ -24,6 +26,7 @@ const NewItem = ({addTask}) => {
                     aria-describedby='basic-addon2'
                     value={formInput}
                     onChange={handleChange}
+                    onKeyPress={event => {if(event.key === 'Enter') {handleClick()}}}
                 />
                 <Button variant="success" id="button-addon2" onClick={handleClick}>
                     Add Task

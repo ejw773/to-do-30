@@ -1,15 +1,11 @@
 import React from 'react';
 import ListGroup from 'react-bootstrap/ListGroup';
-import InputGroup from 'react-bootstrap/InputGroup';
 
-const ListContainer = ({tasks}) => {
+const ListContainer = ({tasks, toggleStatus}) => {
     const taskList = tasks.map((item) => 
-        <ListGroup.Item key={item.id} >
-            <InputGroup>
-                <InputGroup.Checkbox aria-label='Checkbox for This Task' />
-            </InputGroup>
+        <a onClick={toggleStatus}><ListGroup.Item key={item.id}>
             {item.task}
-        </ListGroup.Item>);
+        </ListGroup.Item></a>);
     return (
         <div className='m-3'>
             <ListGroup>

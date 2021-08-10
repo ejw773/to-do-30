@@ -25,12 +25,15 @@ const Main = () => {
                 complete: false
             }
         ]);
+    };
+    const toggleStatus = (task) => {
+        console.log(task)
     }
     return (
         <div>
             <Header />
             <NewItem addTask={addTask}/>
-            <ListContainer tasks={tasks}/>
+            <ListContainer tasks={tasks} toggleStatus={toggleStatus}/>
         </div>
     )
 }
