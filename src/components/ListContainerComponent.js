@@ -1,10 +1,20 @@
 import React from 'react';
-import RenderItem from './RenderItemComponent';
+import ListGroup from 'react-bootstrap/ListGroup';
+import InputGroup from 'react-bootstrap/InputGroup';
 
-const ListContainer = () => {
+const ListContainer = ({tasks}) => {
+    const taskList = tasks.map((item) => 
+        <ListGroup.Item key={item.id} >
+            <InputGroup>
+                <InputGroup.Checkbox aria-label='Checkbox for This Task' />
+            </InputGroup>
+            {item.task}
+        </ListGroup.Item>);
     return (
-        <div>
-            <RenderItem />
+        <div className='m-3'>
+            <ListGroup>
+                {taskList}
+            </ListGroup>
         </div>
     )
 }

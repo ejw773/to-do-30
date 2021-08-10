@@ -16,15 +16,15 @@ const Main = () => {
             complete: false
         }
     ]);
-    const addTask = e => {
-        e.preventDefault();
+    const addTask = (task) => {
         setTasks([
             ...tasks,
             {
                 id: tasks.length,
-                name: e.target.value
+                task: task,
+                complete: false
             }
-        ])
+        ]);
     }
     return (
         <div>

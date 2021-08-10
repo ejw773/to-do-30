@@ -4,15 +4,16 @@ import Button from 'react-bootstrap/Button';
 import FormControl from 'react-bootstrap/FormControl';
 
 
-const NewItem = () => {
+const NewItem = ({addTask}) => {
     const [formInput, setFormInput] = useState('');
 
     const handleChange = ({target}) => {
         let newInput = target.value;
-        setFormInput(prev => newInput)
+        setFormInput(newInput)
     }
     const handleClick = () => {
-        
+        addTask(formInput);
+        setFormInput('')
     }
     return (
         <div className='m-3'>
