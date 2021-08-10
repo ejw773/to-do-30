@@ -11,7 +11,6 @@ const RenderCards = (props) => {
         adjustedDayString = dayString + '/';
     };
     const linkString = baseUrl + adjustedDayString;
-    console.log(linkString);
     return (
         <Card>
             <Card.Body>
