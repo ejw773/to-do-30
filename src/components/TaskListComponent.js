@@ -1,10 +1,15 @@
 import React from 'react';
 
-const TaskList = () => {
+const TaskList = ({taskList}) => {
     return (
-        <div>
-            <h1>Task List</h1>
-        </div>
+        <ul>
+            {taskList.map((item) => {return (
+                <div>
+                    <li key={item.id}>{item.task}</li>
+                    <button>Delete</button>
+                </div>
+            )})}
+        </ul>
     )
 }
 
