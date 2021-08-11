@@ -8,43 +8,55 @@ const Main = () => {
     const [taskList, setTaskList] = useState([
         {
             task: 'wash the cat',
-            id: '0',
+            id: 0,
             isCompleted: false
         },
         {
             task: 'watch a movie',
-            id: '1',
+            id: 1,
             isCompleted: true
         },
         {
             task: 'finish to-do app',
-            id: '2',
+            id: 2,
             isCompleted: false
         }
     ]);
 
     // Set up Methods
     const handleDelete = ({target}) => {
-        alert(`Delete Task ${target.id}: ${target.value}?`);
+        let itemId = parseInt(target.id);
         let newTaskList = [...taskList];
-        newTaskList = taskList.filter((item) => item.id !== target.id);
+        newTaskList = taskList.filter((item) => item.id !== itemId);
         setTaskList(newTaskList);
     };
     const toggleCompleted = ({target}) => {
+        let targetId = parseInt(target.id);
         let newTaskList = [...taskList];
-        newTaskList[target.id].isCompleted = !newTaskList[target.id].isCompleted;
+        newTaskList[target.id].isCompleted = !newTaskList[targetId].isCompleted;
         setTaskList(newTaskList);        
     }
-    const createNewTask = () => {
-        console.log('create new task')
+    const createNewTask = (userInput) => {
+        let newId = 0;
+        if (taskList.length >= 1) {
+            console.log('there is at least one task')
+            let existingIds = taskList.map((item) => item.id);
+            newId = (Math.max(...existingIds)) + 1;
+        }
+        let newTask = {
+            task: userInput,
+            id: newId,
+            isCompleted: false
+        };
+        let newTaskList = [...taskList, newTask];
+        setTaskList(newTaskList);
     }
-
 
     // Return JSX
     return (
         <div>
             <Header />
-            {/* <NewTask /> */}
+            <NewTask createNewTask={createNewTask} />
             <TaskList taskList={taskList} handleDelete={handleDelete} toggleCompleted={toggleCompleted} />
         </div>
         
