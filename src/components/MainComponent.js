@@ -6,21 +6,21 @@ import TaskList from './TaskListComponent';
 const Main = () => {
     // Set up State
     const [taskList, setTaskList] = useState([
-        {
-            task: 'wash the cat',
-            id: 0,
-            isCompleted: false
-        },
-        {
-            task: 'watch a movie',
-            id: 1,
-            isCompleted: true
-        },
-        {
-            task: 'finish to-do app',
-            id: 2,
-            isCompleted: false
-        }
+        // {
+        //     task: 'wash the cat',
+        //     id: 0,
+        //     isCompleted: false
+        // },
+        // {
+        //     task: 'watch a movie',
+        //     id: 1,
+        //     isCompleted: true
+        // },
+        // {
+        //     task: 'finish to-do app',
+        //     id: 2,
+        //     isCompleted: false
+        // }
     ]);
 
     // Set up Methods
@@ -31,6 +31,7 @@ const Main = () => {
         setTaskList(newTaskList);
     };
     const toggleCompleted = ({target}) => {
+        console.log(target);
         let targetId = parseInt(target.id);
         let newTaskList = [...taskList];
         newTaskList[target.id].isCompleted = !newTaskList[targetId].isCompleted;
@@ -50,6 +51,7 @@ const Main = () => {
         };
         let newTaskList = [...taskList, newTask];
         setTaskList(newTaskList);
+        console.log(taskList);
     }
 
     // Return JSX
