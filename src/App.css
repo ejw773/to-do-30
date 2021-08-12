@@ -10,3 +10,7 @@
   background-image: url('./img/paper-background.jpg');
   height: 100vh;
 }
+
+.completed {
+  text-decoration: line-through;
+}

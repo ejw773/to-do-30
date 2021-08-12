@@ -12,7 +12,7 @@ const TaskList = ({toggleStatus, deleteTask, taskList}) => {
                 <InputGroup key={index} className="p-1">
                     <InputGroup.Checkbox aria-label="Checkbox for following text input" id={item.id} name={item.task} value={item.task} checked={item.isComplete} onChange={() => toggleStatus(item.id)} />
                     <Col>
-                        <InputGroup.Text>{item.task}</InputGroup.Text>
+                        <InputGroup.Text className={item.isComplete ? 'completed' : ''}>{item.task}</InputGroup.Text>
                     </Col>
                     <Button variant='danger' id={item.id} onClick={() => deleteTask(item.id)} value={item.task}>Delete</Button>
                 </InputGroup>
