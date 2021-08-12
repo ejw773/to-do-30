@@ -22,7 +22,7 @@ The "To Do App" is the classic exercise in learning web development. This challe
 
 * Bonus: Create [an index page](https://todo.elijahwilcott.com/) for all your different deployed apps.
 
-* Share on social media with ####todo30.
+* Share on social media with #todo30.
 
 * Don't quit.
 
