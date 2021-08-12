@@ -50,7 +50,7 @@ const Main = () => {
     return (
         <div>
             <Header />
-            <Container>
+            <Container className='bodyContainer'>
                 <Row className='justify-content-center'>
                     <Col lg={8}>
                         <NewTask addTask={addTask}/>

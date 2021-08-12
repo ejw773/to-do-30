@@ -5,7 +5,7 @@ import { Nav } from 'react-bootstrap';
 
 const Header = () => {
     return (
-        <Navbar bg='dark' variant='dark' expand='sm'>
+        <Navbar bg='dark' variant='dark' expand='sm' fixed='top'>
             <Container>
                 <Navbar.Brand>To-Do 30</Navbar.Brand>
                 <Navbar.Toggle aria-controls='responsive-navbar-nav' />
