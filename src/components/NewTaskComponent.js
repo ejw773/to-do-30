@@ -4,7 +4,7 @@ import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 
-const NewTask = () => {
+const NewTask = ({addTask}) => {
     const [userInput, setUserInput] = useState('hi');
     const handleChange = ({target}) => {
         let newInput = target.value;
@@ -17,7 +17,7 @@ const NewTask = () => {
                     onChange={handleChange}
                     value={userInput}
                 />
-                <Button>Add</Button>
+                <Button onClick={() => {addTask(userInput)}}>Add</Button>
             </InputGroup>
         </Row>
     )

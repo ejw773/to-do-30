@@ -23,8 +23,23 @@ const Main = () => {
             isComplete: false
         }
     ])
-    const addTask = (task) => {
+    const makeNewId = () => {
         let newId = 0;
+        if (taskList.length >= 1) {
+            let allIds = taskList.map(item => item.id);
+            newId = (Math.max(...allIds)) + 1;
+        };
+        return newId;
+    }
+    const addTask = (task) => {
+        let newId = makeNewId();
+        let newTask = {
+            id: newId,
+            task: task,
+            isComplete: false
+        }
+        let updatedTaskList = [...taskList, newTask];
+        setTaskList(updatedTaskList);
     };
     const toggleStatus = (targetId) => {
         let targetIndex = taskList.findIndex((item) => item.id === targetId);
