@@ -12,7 +12,7 @@ const Header = () => {
                 <Navbar.Collapse className='justify-content-end' id='responsive-navbar-nav'>
                     <Nav>
                         <Nav.Link href='https://todo.elijahwilcott.com/' target='_blank' rel='noreferrer'>About</Nav.Link>
-                        <Nav.Link href='https://github.com/ejw773/to-do-30' target='_blank' rel='noreferrer'>Repo</Nav.Link>
+                        <Nav.Link href='https://github.com/ejw773/to-do-30/tree/04' target='_blank' rel='noreferrer'>Code</Nav.Link>
                         <Nav.Link href='https://elijahwilcott.com/' target='_blank' rel='noreferrer'>Portfolio</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
