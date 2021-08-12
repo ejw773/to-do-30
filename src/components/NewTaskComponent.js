@@ -15,6 +15,11 @@ const NewTask = ({addTask}) => {
             addTask(userInput);
             setUserInput('');
         }
+    };
+    const handleKeyPress = ({key}) => {
+        if (key === 'Enter') {
+            handleClick();
+        }
     }
     return (
         <Row className="p-3">
@@ -22,6 +27,7 @@ const NewTask = ({addTask}) => {
                 <FormControl
                     onChange={handleChange}
                     value={userInput}
+                    onKeyPress={handleKeyPress}
                 />
                 <Button onClick={handleClick}>Add</Button>
             </InputGroup>
