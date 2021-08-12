@@ -5,3 +5,8 @@
   background-color: #e9ecef;
   border-radius: .3rem;
 }
+
+.bg-image {
+  background-image: url('./img/paper-background.jpg');
+  height: 100vh;
+}
