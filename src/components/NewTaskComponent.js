@@ -25,6 +25,7 @@ const NewTask = ({addTask}) => {
         <Row className="p-3">
             <InputGroup>
                 <FormControl
+                    placeholder='Enter a New Task'
                     onChange={handleChange}
                     value={userInput}
                     onKeyPress={handleKeyPress}
