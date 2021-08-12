@@ -5,10 +5,21 @@ import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 
 const NewTask = () => {
+    const [userInput, setUserInput] = useState('hi');
+    const handleChange = ({target}) => {
+        let newInput = target.value;
+        setUserInput(newInput);
+    }
     return (
-        <div>
-            <h1>New Task</h1>
-        </div>
+        <Row>
+            <InputGroup>
+                <FormControl
+                    onChange={handleChange}
+                    value={userInput}
+                />
+                <Button>Add</Button>
+            </InputGroup>
+        </Row>
     )
 }
 

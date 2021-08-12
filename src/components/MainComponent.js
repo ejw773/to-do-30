@@ -23,7 +23,7 @@ const Main = () => {
         }
     ])
     const addTask = (task) => {
-        console.log(`Add: ${task}`)
+        let newId = 0;
     };
     const toggleStatus = (targetId) => {
         let targetIndex = taskList.findIndex((item) => item.id === targetId);
