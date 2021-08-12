@@ -13,7 +13,7 @@ const projectInfo = [
     },
     {
         day: 4,
-        title: 'TBD'
+        title: 'Style It Up!'
     },
     {
         day: 5,
