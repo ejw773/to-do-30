@@ -9,15 +9,21 @@ const NewTask = ({addTask}) => {
     const handleChange = ({target}) => {
         let newInput = target.value;
         setUserInput(newInput);
+    };
+    const handleClick = () => {
+        if (userInput !== '') {
+            addTask(userInput);
+            setUserInput('');
+        }
     }
     return (
-        <Row>
+        <Row className="p-3">
             <InputGroup>
                 <FormControl
                     onChange={handleChange}
                     value={userInput}
                 />
-                <Button onClick={() => {addTask(userInput)}}>Add</Button>
+                <Button onClick={handleClick}>Add</Button>
             </InputGroup>
         </Row>
     )

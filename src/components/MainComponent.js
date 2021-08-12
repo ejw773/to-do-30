@@ -6,23 +6,7 @@ import TaskList from './TaskListComponent';
 
 
 const Main = () => {
-    const [taskList, setTaskList] = useState([
-        {
-            id: 0,
-            task: 'wash the cat',
-            isComplete: false
-        },
-        {
-            id: 1,
-            task: 'watch a movie',
-            isComplete: true
-        },
-        {
-            id: 3,
-            task: 'go to bed',
-            isComplete: false
-        }
-    ])
+    const [taskList, setTaskList] = useState([])
     const makeNewId = () => {
         let newId = 0;
         if (taskList.length >= 1) {
