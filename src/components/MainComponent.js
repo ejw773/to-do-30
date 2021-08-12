@@ -15,14 +15,9 @@ const Main = () => {
         let newTaskList = taskList.filter((item) => item.id !== itemId);
         setTaskList(newTaskList);
     };
-    const toggleCompleted = ({target}) => {
-        let convertedId = parseInt(target.id);
+    const toggleCompleted = (targetId) => {
         let newTaskList = [...taskList];
-        let targetIndex = newTaskList.findIndex(function(item, index) {
-            if(item.id === convertedId)
-            return true;
-        });
-        console.log(`Target Index: ${targetIndex}`);
+        let targetIndex = newTaskList.findIndex(item => item.id === targetId);
         newTaskList[targetIndex].isCompleted = !newTaskList[targetIndex].isCompleted;
         setTaskList(newTaskList);        
     }

@@ -10,7 +10,7 @@ const TaskList = (props) => {
         <Row>
             {taskList.map((item, index) => {return (
                     <InputGroup key={index}>
-                        <InputGroup.Checkbox aria-label="Checkbox for following text input" id={item.id} name={item.task} value={item.task} checked={item.isCompleted} onChange={toggleCompleted} />
+                        <InputGroup.Checkbox aria-label="Checkbox for following text input" id={item.id} name={item.task} value={item.task} checked={item.isCompleted} onChange={() => toggleCompleted(item.id)} />
                         <Col>
                            <InputGroup.Text>{item.task}</InputGroup.Text>
                         </Col>
