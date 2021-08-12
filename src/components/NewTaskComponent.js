@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 
 const NewTask = ({addTask}) => {
-    const [userInput, setUserInput] = useState('hi');
+    const [userInput, setUserInput] = useState('');
     const handleChange = ({target}) => {
         let newInput = target.value;
         setUserInput(newInput);
