@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import Header from './HeaderComponent'
-import NewTask from './NewTaskComponent'
-import TaskList from './TaskListComponent'
+import Container from 'react-bootstrap/Container';
+import Header from './HeaderComponent';
+import NewTask from './NewTaskComponent';
+import TaskList from './TaskListComponent';
 
 
 const Main = () => {
@@ -39,8 +40,10 @@ const Main = () => {
     return (
         <div>
             <Header />
+            <Container>
             <NewTask addTask={addTask}/>
             <TaskList toggleStatus={toggleStatus} deleteTask={deleteTask} taskList={taskList}/>
+            </Container>
         </div>
     )
 }

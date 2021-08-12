@@ -7,6 +7,7 @@ import Col from 'react-bootstrap/Col';
 
 const TaskList = ({toggleStatus, deleteTask, taskList}) => {
     return (
+        
         <Row>
             {taskList.map((item, index) => { return (
                 <InputGroup key={index}>
@@ -18,6 +19,7 @@ const TaskList = ({toggleStatus, deleteTask, taskList}) => {
                 </InputGroup>
             )})}
         </Row>
+        
     )
 }
 
