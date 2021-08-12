@@ -9,7 +9,7 @@ const projectInfo = [
     },
     {
         day: 3,
-        title: 'TBD'
+        title: 'Complete / Delete Tasks'
     },
     {
         day: 4,
