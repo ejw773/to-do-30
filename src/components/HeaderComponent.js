@@ -2,8 +2,9 @@ import React from 'react';
 
 const Header = () => {
     return (
-        <div>
-            <h1>Header</h1>
+        <div className='jumbotron'>
+            <h1>To-Do 30: Day 4</h1>
+            <h2>Repeat Yesterday's Success</h2>
         </div>
     )
 }
