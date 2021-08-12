@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import Header from './HeaderComponent';
 import NewTask from './NewTaskComponent';
 import TaskList from './TaskListComponent';
 import Footer from './FooterComponent';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 
 const Main = () => {
     const [taskList, setTaskList] = useState([])
@@ -36,12 +38,25 @@ const Main = () => {
         updatedTaskList = updatedTaskList.filter((item) => item.id !== targetId);
         setTaskList(updatedTaskList);
     }
+    useEffect(() => {
+        let storedData = localStorage.getItem('data');
+        if (storedData) {
+            setTaskList(JSON.parse(storedData));
+        }
+    }, [])
+    useEffect(() => {
+        localStorage.setItem('data', JSON.stringify(taskList))
+    })
     return (
         <div>
             <Header />
             <Container>
-                <NewTask addTask={addTask}/>
-                <TaskList toggleStatus={toggleStatus} deleteTask={deleteTask} taskList={taskList}/>
+                <Row className='justify-content-center'>
+                    <Col lg={8}>
+                        <NewTask addTask={addTask}/>
+                        <TaskList toggleStatus={toggleStatus} deleteTask={deleteTask} taskList={taskList}/>
+                    </Col>
+                </Row>
             </Container>
             <Footer />
         </div>

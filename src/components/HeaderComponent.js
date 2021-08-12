@@ -7,16 +7,7 @@ const Header = () => {
     return (
         <Navbar bg='dark' variant='dark' expand='sm'>
             <Container>
-                <Navbar.Brand>
-                    {/* <img 
-                    alt=''
-                    src='/img/to-do-30-icon-only-flattened.png'
-                    width='30'
-                    height='30'
-                    className='d-inline-block align-top'
-                    />{' '} */}
-                    To-Do 30
-                </Navbar.Brand>
+                <Navbar.Brand>To-Do 30</Navbar.Brand>
                 <Navbar.Toggle aria-controls='responsive-navbar-nav' />
                 <Navbar.Collapse className='justify-content-end' id='responsive-navbar-nav'>
                     <Nav>
