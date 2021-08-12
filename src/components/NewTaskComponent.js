@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import InputGroup from 'react-bootstrap/InputGroup';
 import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
+import Row from 'react-bootstrap/Row';
 
 const NewTask = ({createNewTask}) => {
     const [userInput, setUserInput] = useState('');
@@ -16,7 +17,7 @@ const NewTask = ({createNewTask}) => {
     };
 
     return (
-        <div>
+        <Row>
             <InputGroup className="mb-3 p-3">
                 <FormControl
                 placeholder='New Task'
@@ -30,7 +31,7 @@ const NewTask = ({createNewTask}) => {
                     Add
                 </Button>
             </InputGroup>
-        </div>
+        </Row>
     )
 }
 
