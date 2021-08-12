@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Header from './HeaderComponent';
 import NewTask from './NewTaskComponent';
 import TaskList from './TaskListComponent';
-
+import Footer from './FooterComponent';
 
 const Main = () => {
     const [taskList, setTaskList] = useState([])
@@ -40,9 +40,10 @@ const Main = () => {
         <div>
             <Header />
             <Container>
-            <NewTask addTask={addTask}/>
-            <TaskList toggleStatus={toggleStatus} deleteTask={deleteTask} taskList={taskList}/>
+                <NewTask addTask={addTask}/>
+                <TaskList toggleStatus={toggleStatus} deleteTask={deleteTask} taskList={taskList}/>
             </Container>
+            <Footer />
         </div>
     )
 }
