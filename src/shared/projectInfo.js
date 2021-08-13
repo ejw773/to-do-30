@@ -1,19 +1,27 @@
 const projectInfo = [
     {
         day: 1,
-        title: 'Finished Before Breakfast'
+        title: 'Finished Before Breakfast',
+        comment: 'My very first one! I got the idea for the challenge, and threw this awful thing together before breakfast.',
+        code: 'https://github.com/ejw773/to-do-30/tree/todo01'
     },
     {
         day: 2,
-        title: 'React-Bootstrap'
+        title: 'React-Bootstrap',
+        comment: 'Added React-Bootstrap to try to polish up the appearance a bit. Still not minimally functional yet.',
+        code: 'https://github.com/ejw773/to-do-30/tree/02'
     },
     {
         day: 3,
-        title: 'Complete / Delete Tasks'
+        title: 'Complete / Delete Tasks',
+        comment: "Now it's beginning to be functional. Tasks can be marked as complete, or deleted.",
+        code: 'https://github.com/ejw773/to-do-30/tree/03'
     },
     {
         day: 4,
-        title: 'Style It Up!'
+        title: 'Style It Up!',
+        comment: 'Today I planned on just sitting on my laurels by re-creating what I did yesterday. However, once that was done, I found myself adding other styling improvements. I even integrated saving state to local storage. With hooks, it’s so easy!',
+        code: 'https://github.com/ejw773/to-do-30/tree/04'
     },
     {
         day: 5,

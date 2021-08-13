@@ -4,7 +4,7 @@ import projectInfo from '../shared/projectInfo';
 
 const ProjectCard = () => {
     const renderCards = projectInfo.map((item) => 
-        <RenderCards key={item.day} title={item.title} link={item.link} day={item.day}/>
+        <RenderCards key={item.day} title={item.title} link={item.link} day={item.day} comment={item.comment} code={item.code}/>
     );
     return (
         <ul>

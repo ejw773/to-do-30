@@ -13,9 +13,11 @@ const RenderCards = (props) => {
     const linkString = baseUrl + adjustedDayString;
     return (
         <Card>
+            <Card.Header>Day: {props.day}</Card.Header>
             <Card.Body>
-                <Card.Title>Day: {props.day}</Card.Title>
-                <Card.Subtitle><a href={linkString} target="_blank" rel="noreferrer">{props.title}</a></Card.Subtitle>
+                <Card.Title>{props.title}</Card.Title>
+                <Card.Subtitle><a href={linkString}>Live Site</a> | <a href={props.code} target="_blank" rel="noreferrer">Code</a></Card.Subtitle>
+                <Card.Text>{props.comment}</Card.Text>
             </Card.Body>
         </Card>
     )
