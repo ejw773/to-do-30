@@ -2,19 +2,19 @@ const projectInfo = [
     {
         day: 1,
         title: 'Finished Before Breakfast',
-        comment: 'My very first one! I got the idea for the challenge, and threw this awful thing together before breakfast.',
+        comment: "I just did day 1 during the few minutes before breakfast. Yes, it's bad, but it's DONE!",
         code: 'https://github.com/ejw773/to-do-30/tree/todo01'
     },
     {
         day: 2,
         title: 'React-Bootstrap',
-        comment: 'Added React-Bootstrap to try to polish up the appearance a bit. Still not minimally functional yet.',
+        comment: "For today's app, I used React-Bootstrap to polish up the appearance. It looks a whole lot better than Day 1's pathetic deployed-before-breakfast app, but functionality isn't any better. I'll work on that for tomorrow's app.",
         code: 'https://github.com/ejw773/to-do-30/tree/02'
     },
     {
         day: 3,
         title: 'Complete / Delete Tasks',
-        comment: "Now it's beginning to be functional. Tasks can be marked as complete, or deleted.",
+        comment: "Today I continued with React-Bootstrap, and added the ability to check off items and even delete them. This was the first day I wasn't completely humiliated by the results. I'm actually getting somewhere!",
         code: 'https://github.com/ejw773/to-do-30/tree/03'
     },
     {
