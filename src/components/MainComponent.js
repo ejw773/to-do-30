@@ -4,6 +4,7 @@ import NewTask from './NewTaskComponent';
 import TaskList from './TaskListComponent';
 import Footer from './FooterComponent';
 import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
 
 const Main = () => {
     const [taskList, setTaskList] = useState([
@@ -45,8 +46,10 @@ const Main = () => {
         <div>
             <Header />
             <Container>
-                <NewTask addTask={addTask}/>
-                <TaskList taskList={taskList}/>
+                <Row className='m-3 justify-content-center'>
+                    <NewTask addTask={addTask}/>
+                    <TaskList taskList={taskList}/>
+                </Row>
             </Container>
             <Footer />
         </div>

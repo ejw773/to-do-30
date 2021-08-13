@@ -1,5 +1,7 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 const TaskList = ({taskList}) => {
     const toggleStatus = () => {
@@ -16,9 +18,9 @@ const TaskList = ({taskList}) => {
     }
 
     return (
-        <Container>
+        <Col className='col-sm-9' style={{backgroundColor: 'blue'}}>
             {taskList.map((item) => renderItems(item))}
-        </Container>
+        </Col>
     )
 }
 
