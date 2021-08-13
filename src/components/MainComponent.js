@@ -7,23 +7,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 
 const Main = () => {
-    const [taskList, setTaskList] = useState([
-        {
-            id: 0,
-            task: 'write tasks',
-            complete: true
-        },
-        {
-            id: 1,
-            task: 'write more tasks',
-            complete: false
-        },
-        {
-            id: 2,
-            task: 'write even more tasks',
-            complete: false
-        }
-    ]);
+    const [taskList, setTaskList] = useState([]);
     const addTask = (newTask) => {
         let id = newId();
         let newTaskObject = {

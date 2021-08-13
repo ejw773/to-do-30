@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
 import InputGroup from 'react-bootstrap/InputGroup';
-import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
@@ -19,7 +17,7 @@ const TaskList = ({taskList, toggleTask, deleteTask}) => {
     const renderItems = (item, index) => {
         return (
             <InputGroup key={index} className="p-1">
-                <InputGroup.Checkbox variant='light' bg='light' id={item.id} placeholder={item.task} id={item.id} name={item.task} value={item.task} checked={item.complete} onChange={() => toggleStatus(item.id)} />
+                <InputGroup.Checkbox variant='light' bg='light' placeholder={item.task} id={item.id} name={item.task} value={item.task} checked={item.complete} onChange={() => toggleStatus(item.id)} />
                 <Col>
                 <InputGroup.Text className={item.complete ? 'completed' : ''}>{item.task}</InputGroup.Text>
                 </Col>
