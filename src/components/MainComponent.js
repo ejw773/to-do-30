@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './HeaderComponent';
 import NewTask from './NewTaskComponent';
 import TaskList from './TaskListComponent';
@@ -37,6 +37,17 @@ const Main = () => {
         newTaskList = taskList.filter(item => item.id !== id);
         setTaskList(newTaskList);
     }
+
+    useEffect(() => {
+        let storedData = localStorage.getItem('data');
+        if (storedData) {
+            setTaskList(JSON.parse(storedData));
+        }
+    }, [])
+    useEffect(() => {
+        localStorage.setItem('data', JSON.stringify(taskList))
+    });
+
     return (
         <div>
             <Header />
