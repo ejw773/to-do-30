@@ -11,7 +11,8 @@ const Header = () => {
                 <Navbar.Toggle aria-controls='responsive-navbar-nav' />
                 <Navbar.Collapse className='justify-content-end' id='responsive-navbar-nav'>
                     <Nav>
-                        <Nav.Link href='https://todo.elijahwilcott.com/'>About</Nav.Link>
+                        <Nav.Link href='https://todo.elijahwilcott.com/'>Index</Nav.Link>
+                        <Nav.Link href='https://github.com/ejw773/to-do-30/' target='_blank' rel='noreferrer'>About</Nav.Link>
                         <Nav.Link href='https://github.com/ejw773/to-do-30/tree/04' target='_blank' rel='noreferrer'>Code</Nav.Link>
                         <Nav.Link href='https://elijahwilcott.com/'>Portfolio</Nav.Link>
                     </Nav>
