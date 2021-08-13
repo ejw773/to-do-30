@@ -1,12 +1,26 @@
 import React from 'react';
-import Row from  'react-bootstrap/Row';
+import Container from 'react-bootstrap/Container';
 
-const TaskList = () => {
+const TaskList = ({taskList}) => {
+    const toggleStatus = () => {
+        console.log('toggled')
+    };
+    const deleteTask = () => {
+        console.log('deleteME')
+    }
+    
+    const renderItems = (item) => {
+        return (
+            <p key={item.id} style={{color: 'white'}}>{item.task}</p>
+        )
+    }
+
     return (
-        <Row className='m-3'>
-            <h1>Hi</h1>
-        </Row>
+        <Container>
+            {taskList.map((item) => renderItems(item))}
+        </Container>
     )
 }
+
 
 export default TaskList;    
