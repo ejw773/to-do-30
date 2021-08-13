@@ -42,13 +42,26 @@ const Main = () => {
         };
         return newNum;
     };
+    const toggleTask = (id) => {
+        let newTaskList = [...taskList];
+        let targetIndex = newTaskList.findIndex(item => item.id === id);
+        newTaskList[targetIndex].complete = !taskList[targetIndex].complete;
+        setTaskList(newTaskList);
+    };
+    const deleteTask = (id) => {
+        let newTaskList = [...taskList];
+        newTaskList = taskList.filter(item => item.id !== id);
+        setTaskList(newTaskList);
+    }
     return (
         <div>
             <Header />
             <Container>
                 <Row className='m-3 justify-content-center'>
                     <NewTask addTask={addTask}/>
-                    <TaskList taskList={taskList}/>
+                </Row>
+                <Row>
+                    <TaskList taskList={taskList} toggleTask={toggleTask} deleteTask={deleteTask}/>
                 </Row>
             </Container>
             <Footer />

@@ -25,7 +25,6 @@ const NewTask = ({addTask}) => {
         }
     }
     return (
-        <Row className='m-3 justify-content-center'>
             <Col className='col-sm-10'>
                 <InputGroup>
                 <Button bg='light' variant='light' onClick={handleClick}><FontAwesomeIcon icon={faPlus} /></Button>
@@ -37,7 +36,6 @@ const NewTask = ({addTask}) => {
                 />
                 </InputGroup>
             </Col>
-        </Row>
     )
 }
 
