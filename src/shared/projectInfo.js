@@ -25,7 +25,9 @@ const projectInfo = [
     },
     {
         day: 5,
-        title: 'TBD'
+        title: 'Sitting on My Laurels',
+        comment: "Today I did indeed just sit on my laurels - seeking to merely repeat yesterday's success. I did make some small improvements - adding FontAwesome, for example. Eventually I need to get around to making a way to modify existing tasks.",
+        code: 'https://github.com/ejw773/to-do-30/tree/05'
     },
     {
         day: 6,
