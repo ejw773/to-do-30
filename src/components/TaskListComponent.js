@@ -27,7 +27,7 @@ const TaskList = ({taskList, toggleTask, deleteTask}) => {
     }
 
     return (
-        <Col className='col-xl-10'>
+        <Col  className='col-sm-10'>
             {taskList.map((item, index) => renderItems(item, index))}
         </Col>
     )

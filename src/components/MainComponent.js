@@ -44,7 +44,7 @@ const Main = () => {
                 <Row className='m-3 justify-content-center'>
                     <NewTask addTask={addTask}/>
                 </Row>
-                <Row>
+                <Row className='m-3 justify-content-center'>
                     <TaskList taskList={taskList} toggleTask={toggleTask} deleteTask={deleteTask}/>
                 </Row>
             </Container>
