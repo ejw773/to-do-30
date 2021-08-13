@@ -10,8 +10,8 @@ const Header = () => {
         <Container>
             <Navbar.Brand>To Do 30</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="me-auto">
+            <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
+                <Nav>
                     <Nav.Link href="https://github.com/ejw773/to-do-30" target="_blank" rel="noreferrer">About</Nav.Link>
                     <Nav.Link href="https://github.com/ejw773/to-do-30/tree/04" target="_blank" rel="noreferrer">Code</Nav.Link>
                     <Nav.Link href="https://elijahwilcott.com/">Portfolio</Nav.Link>
