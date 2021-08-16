@@ -7,3 +7,5 @@ The "To Do App" is the classic exercise in learning web development. This challe
 ### Landing Page
 
 This branch is for the index landing page for my own challenge. I update it each day I deploy a new completed challenge.
+
+To update: Simply add a new object at the end of the projectInfo array within the src/shared folder. Include a day number, a title, and a comment, and the new card will be automatically generated. Re-deploy.
