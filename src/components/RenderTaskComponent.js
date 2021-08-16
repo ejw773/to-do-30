@@ -24,7 +24,8 @@ const RenderTask = ({task, toggleTask, modifyTask}) => {
         let id = parseInt(e.target.dataset.id);
         if (e.key === 'Enter') {
             modifyTask(id, taskText);
-        }
+            e.target.blur();
+        };
     }
 
     return (

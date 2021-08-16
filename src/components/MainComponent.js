@@ -24,7 +24,6 @@ const Main = () => {
             let updatedState = [...taskList];
             updatedState[targetIndex].task = text;
             setTaskList(updatedState);
-            console.log(taskList);
         } else {
             deleteTask(id);
         }
