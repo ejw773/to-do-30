@@ -4,6 +4,6 @@ The "To Do App" is the classic exercise in learning web development. This challe
 
 ## Day 6: [Put Link to Deployed Site Here](https://todo.elijahwilcott.com/06)
 
-Image by <a href="https://pixabay.com/users/dimhou-5987327/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3652697">Dim Hou</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3652697">Pixabay</a>
+Background Image by <a href="https://pixabay.com/users/dimhou-5987327/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3652697">Dim Hou</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3652697">Pixabay</a>
 
 ![To-Do 30](https://github.com/ejw773/to-do-30/blob/main/public/to-do-30-flattened.png)
