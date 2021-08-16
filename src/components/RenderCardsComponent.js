@@ -13,11 +13,8 @@ const RenderCards = ({title, day, comment}) => {
         adjustedDayString = dayString + '/';
         gitDayString = dayString;
     };
-    console.log(`Day String: ${adjustedDayString}`);
-    console.log(`Git Day String: ${gitDayString}`)
     const linkString = baseUrl + adjustedDayString;
     const gitLinkString = gitBaseUrl + gitDayString;
-    console.log(gitLinkString);
     return (
         <Card>
             <Card.Header>Day: {day}</Card.Header>
