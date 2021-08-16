@@ -7,6 +7,10 @@ import Button from 'react-bootstrap/FormControl';
 const RenderTask = ({task, toggleTask, modifyTask}) => {
     const [taskText, setTaskText] = useState(task.task)
 
+    const handleClick = (e) => {
+        console.log(e)
+    }
+
     const handleToggle = (id) => {
         toggleTask(parseInt(id));
     };
@@ -29,13 +33,13 @@ const RenderTask = ({task, toggleTask, modifyTask}) => {
     }
 
     return (
-        <label>
-            <InputGroup className="mb-3">
-                <InputGroup.Checkbox aria-label="Checkbox for following text input" onChange={() => handleToggle(task.id)} checked={task.complete} id={task.id} />
-                <FormControl aria-label="Text input with checkbox" id={task.id} data-id={task.id} value={taskText} onChange={handleChange} onBlur={handleOnBlur} onKeyPress={handleKeyPress} />
-                {/* <Button onClick={handleClick} variant="dark" id="add-task">+</Button> */}
-            </InputGroup>
-        </label>
+            <label>
+                <InputGroup className="mb-3">
+                    <InputGroup.Checkbox aria-label="Checkbox for following text input" onChange={() => handleToggle(task.id)} checked={task.complete} id={task.id} />
+                    <FormControl aria-label="Text input with checkbox" id={task.id} data-id={task.id} value={taskText} onChange={handleChange} onBlur={handleOnBlur} onKeyPress={handleKeyPress} />
+                    <InputGroup.Button />
+                </InputGroup>
+            </label>
     )
 }
 
