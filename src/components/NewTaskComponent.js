@@ -6,6 +6,17 @@ const NewTask = ({addTask}) => {
     const [newTask, setNewTask] = useState('');
     const handleChange = ({target}) => {
         setNewTask(target.value);
+    };
+    const handleClick = () => {
+        if (newTask !== '') {
+            addTask(newTask);
+            setNewTask('');
+        }
+    };
+    const handleKeyPress = ({key}) => {
+        if (key === 'Enter') {
+            handleClick()
+        }
     }
     return (
         <div>
@@ -13,9 +24,10 @@ const NewTask = ({addTask}) => {
                 placeholder='Enter New Task'
                 onChange={handleChange}
                 value={newTask}
+                onKeyPress={handleKeyPress}
             />
             <Button
-            onClick={() => addTask(newTask)}
+            onClick={handleClick}
             >
                 Add
             </Button>

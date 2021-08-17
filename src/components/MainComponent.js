@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Header from './HeaderComponent'
-import Footer from './FooterComponent'
 import NewTask from './NewTaskComponent'
 import TaskList from './TaskListComponent'
 
@@ -70,7 +69,6 @@ const Main = () => {
             <Header />
             <NewTask addTask={addTask}/>
             <TaskList taskList={taskList} deleteTask={deleteTask} modifyTask={modifyTask} toggleTask={toggleTask} />
-            <Footer />    
         </React.Fragment>
     )
 }

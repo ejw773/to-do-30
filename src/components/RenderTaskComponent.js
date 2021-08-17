@@ -8,11 +8,15 @@ import TextField from '@material-ui/core/TextField'
 
 const RenderTask = ({task, deleteTask, modifyTask, toggleTask}) => {
     let checkBox;
+    let checkColor;
     if (task.complete) {
         checkBox = <CheckCircleIcon/>;
+        checkColor = 'primary'
     } else {
         checkBox = <CheckIcon/>;
+        checkColor = ''
     };
+
     
     return (
         <div>
@@ -23,7 +27,7 @@ const RenderTask = ({task, deleteTask, modifyTask, toggleTask}) => {
             onChange={(target) => modifyTask(target.target.value, task.id)}
             />
             <ButtonGroup variant='contained' size='large'>
-                <Button color='primary' startIcon={checkBox} onClick={() => toggleTask(task.id)}></Button>
+                <Button color={checkColor} startIcon={checkBox} onClick={() => toggleTask(task.id)}></Button>
                 <Button color='secondary' endIcon={<DeleteIcon/>} onClick={() => deleteTask(task.id)}></Button>
             </ButtonGroup>
         </div>
