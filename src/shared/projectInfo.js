@@ -26,8 +26,8 @@ const projectInfo = [
     },
     {
         day: 6,
-        title: 'TBD',
-        comment: 'TBD'
+        title: 'Modify Existing Tasks',
+        comment: "A major flaw in previous versions was: No way to change a task that already exists. As I addressed that problem, I found myself edging toward prop drilling, so I was also going to add Redux. Unfortunately, time would not allow."
     }
 ];
 
