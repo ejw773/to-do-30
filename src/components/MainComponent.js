@@ -69,7 +69,7 @@ const Main = () => {
             <Container>
                 <Row className='m-3'>
                     <NewTask addTask={addTask}/>
-                    <TaskList taskList={taskList} toggleTask={toggleTask} modifyTask={modifyTask}/>
+                    <TaskList taskList={taskList} toggleTask={toggleTask} modifyTask={modifyTask} deleteTask={deleteTask}/>
                 </Row>
             </Container>
             <Footer />

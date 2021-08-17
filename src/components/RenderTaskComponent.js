@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
 import InputGroup from 'react-bootstrap/InputGroup';
 import FormControl from 'react-bootstrap/FormControl';
-import Button from 'react-bootstrap/FormControl';
+import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
 
-const RenderTask = ({task, toggleTask, modifyTask}) => {
+const RenderTask = ({task, toggleTask, modifyTask, deleteTask}) => {
     const [taskText, setTaskText] = useState(task.task)
 
     const handleClick = (e) => {
-        console.log(e)
+        deleteTask(e);
     }
 
     const handleToggle = (id) => {
@@ -37,7 +40,7 @@ const RenderTask = ({task, toggleTask, modifyTask}) => {
                 <InputGroup className="mb-3">
                     <InputGroup.Checkbox aria-label="Checkbox for following text input" onChange={() => handleToggle(task.id)} checked={task.complete} id={task.id} />
                     <FormControl aria-label="Text input with checkbox" id={task.id} data-id={task.id} value={taskText} onChange={handleChange} onBlur={handleOnBlur} onKeyPress={handleKeyPress} />
-                    <InputGroup.Button />
+                    <Button variant='dark' onClick={() => handleClick(task.id)}><FontAwesomeIcon icon={faTrash} /></Button>
                 </InputGroup>
             </label>
     )
