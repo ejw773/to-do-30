@@ -23,25 +23,48 @@ const Main = () => {
             complete: false
         }
     ]);
-    const addTask = (text) => {
-        console.log(`Add task: ${text}`);
+    const newId = () => {
+        let newId = 0;
+        if (taskList.length > 0) {
+            let idList = taskList.map((item) => item.id);
+            newId = Math.max(...idList) + 1;
+        };
+        return newId;
     };
+
+    const addTask = (text) => {
+        let id = newId();
+        let newTask = {
+            id: id,
+            task: text,
+            complete: false
+        }
+        let updatedTasks = [...taskList, newTask];
+        setTaskList(updatedTasks);
+    };
+
     const deleteTask = (id) => {
         let updatedTasks = [...taskList];
         updatedTasks = taskList.filter((item) => item.id !== id);
-        console.log(updatedTasks);
         setTaskList(updatedTasks);
     };
+
     const modifyTask = (text, id) => {
         console.log(`Modify task: ${id} to ${text}`);
         console.log(id);
+        const updatedTasks = [...taskList];
+        const targetIndex = taskList.findIndex((item) => item.id === id);
+        updatedTasks[targetIndex].task = text;
+        setTaskList(updatedTasks);
     };
+
     const toggleTask = (id) => {
         let updatedTasks = [...taskList];
         let targetIndex = updatedTasks.findIndex(i => i.id === id);
         updatedTasks[targetIndex].complete = !taskList[targetIndex].complete;
         setTaskList(updatedTasks);
-    }
+    };
+
     return (
         <React.Fragment>
             <Header />
