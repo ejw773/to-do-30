@@ -32,7 +32,7 @@ const projectInfo = [
     {
         day: 7,
         title: 'Material-UI',
-        comment: "For the first time, I'm tackling a non-Bootstrap library. Having spent a lot of time with Bootstrap, it's actually a lot easier than I expected. Many of the same principles apply."
+        comment: "Today I learned the basics of Material-UI. After working so much with Bootstrap, it wasn't much of a jump. The biggest challenge, not surprisingly, was layout - Box, Conatiner, Grid. I have a lot to learn about those. I'm also not clear about how the custom styling works - but that's for another day."
     }
 ];
 
