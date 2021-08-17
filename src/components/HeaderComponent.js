@@ -18,7 +18,7 @@ const Header = () => {
                     <Nav className='ms-auto'>
                         <Nav.Link href='https://todo.elijahwilcott.com/'>Index</Nav.Link>
                         <Nav.Link href='https://github.com/ejw773/to-do-30/tree/main' target="_blank" rel="noreferrer">About</Nav.Link>
-                        <Nav.Link href='https://github.com/ejw773/to-do-30/tree/05' target="_blank" rel="noreferrer">Code</Nav.Link>
+                        <Nav.Link href='https://github.com/ejw773/to-do-30/tree/06' target="_blank" rel="noreferrer">Code</Nav.Link>
                         <Nav.Link href='https://elijahwilcott.com/'>Portfolio</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
