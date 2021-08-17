@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import Box from '@material-ui/core/Box';
+import Typography from '@material-ui/core/Typography'
 
 const NewTask = ({addTask}) => {
     const [newTask, setNewTask] = useState('');
@@ -19,7 +21,8 @@ const NewTask = ({addTask}) => {
         }
     }
     return (
-        <div>
+        <Box p={6}>
+            <Typography className='heading-subtitle' variant='subtitle1'>Day 7: Material-UI</Typography>
             <TextField
                 placeholder='Enter New Task'
                 onChange={handleChange}
@@ -31,7 +34,7 @@ const NewTask = ({addTask}) => {
             >
                 Add
             </Button>
-        </div>
+        </Box>
     )
 }
 

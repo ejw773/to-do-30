@@ -5,8 +5,8 @@ import 'fontsource-roboto';
 
 function App() {
   return (
-    <Container className='App'>
-      <Main />
+    <Container className='App' maxWidth='md'>
+        <Main />
     </Container>
   );
 }

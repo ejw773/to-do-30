@@ -16,7 +16,11 @@ const RenderTask = ({task, deleteTask, modifyTask, toggleTask}) => {
         checkBox = <CheckIcon/>;
         checkColor = ''
     };
-
+    let handleEnter = (event) => {
+        if (event.key === 'Enter') {
+            event.target.blur();
+        }
+    }
     
     return (
         <div>
@@ -25,6 +29,7 @@ const RenderTask = ({task, deleteTask, modifyTask, toggleTask}) => {
             value={task.task}
             size='small'
             onChange={(target) => modifyTask(target.target.value, task.id)}
+            onKeyPress={handleEnter}
             />
             <ButtonGroup variant='contained' size='large'>
                 <Button color={checkColor} startIcon={checkBox} onClick={() => toggleTask(task.id)}></Button>

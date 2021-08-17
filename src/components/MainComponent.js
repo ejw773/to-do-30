@@ -2,26 +2,10 @@ import React, { useState, useEffect } from 'react';
 import Header from './HeaderComponent'
 import NewTask from './NewTaskComponent'
 import TaskList from './TaskListComponent'
-
+import Box from '@material-ui/core/Box'
 
 const Main = () => {
-    const [taskList, setTaskList] = useState([
-        {
-            id: 0,
-            task: 'replace spark plugs',
-            complete: false
-        },
-        {
-            id: 1,
-            task: 'change light bulbs',
-            complete: true
-        },
-        {
-            id: 2,
-            task: 'replace sunroof cover',
-            complete: false
-        }
-    ]);
+    const [taskList, setTaskList] = useState([]);
     const newId = () => {
         let newId = 0;
         if (taskList.length > 0) {
@@ -49,8 +33,6 @@ const Main = () => {
     };
 
     const modifyTask = (text, id) => {
-        console.log(`Modify task: ${id} to ${text}`);
-        console.log(id);
         const updatedTasks = [...taskList];
         const targetIndex = taskList.findIndex((item) => item.id === id);
         updatedTasks[targetIndex].task = text;
@@ -64,11 +46,24 @@ const Main = () => {
         setTaskList(updatedTasks);
     };
 
+    useEffect(() => {
+        let storedData = localStorage.getItem('data');
+        if (storedData) {
+            setTaskList(JSON.parse(storedData));
+        }
+    }, []);
+
+    useEffect(() => {
+        localStorage.setItem('data', JSON.stringify(taskList))
+    });
+
     return (
         <React.Fragment>
             <Header />
+            <Box className="App-Body">
             <NewTask addTask={addTask}/>
             <TaskList taskList={taskList} deleteTask={deleteTask} modifyTask={modifyTask} toggleTask={toggleTask} />
+            </Box>
         </React.Fragment>
     )
 }

@@ -2,3 +2,10 @@
   text-align: center;
 }
 
+.App-Body {
+  margin-top: 60px;
+}
+
+.heading-subtitle {
+  margin-bottom: 30px !important;
+}
