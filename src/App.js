@@ -1,11 +1,12 @@
 import './App.css';
-import Button from '@material-ui/core/Button';
+import Main from './components/MainComponent';
+import Container from '@material-ui/core/Container';
 
 function App() {
   return (
-    <Button variant='contained' color='primary'>
-      Hello World
-    </Button>
+    <Container maxWidth='sm'>
+      <Main className="App"/>
+    </Container>
   );
 }
 
