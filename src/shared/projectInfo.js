@@ -28,6 +28,11 @@ const projectInfo = [
         day: 6,
         title: 'Modify Existing Tasks',
         comment: "A major flaw in previous versions was: No way to change a task that already exists. As I addressed that problem, I found myself edging toward prop drilling, so I was also going to add Redux. Unfortunately, time would not allow."
+    },
+    {
+        day: 7,
+        title: 'Material-UI',
+        comment: "For the first time, I'm tackling a non-Bootstrap library. Having spent a lot of time with Bootstrap, it's actually a lot easier than I expected. Many of the same principles apply."
     }
 ];
 
