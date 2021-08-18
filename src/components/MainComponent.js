@@ -6,26 +6,15 @@ import TaskList from './TaskListComponent';
 import Container from '@material-ui/core/Container';
 
 const Main = () => {
-    const [taskList, setTaskList] = useState([
-        {
-            id: 0,
-            task: 'walk the dog',
-            complete: false
-        },
-        {
-            id: 1,
-            task: 'wash the cat',
-            complete: true
-        },
-        {
-            id: 2,
-            task: 'cook dinner',
-            complete:false
-        }
-    ]);
+    const [taskList, setTaskList] = useState([]);
     const newId = () => {
-        let oldIds = taskList.map((item) => item.id);
-        return Math.max(...oldIds) + 1;
+        let zeroId = 0;
+        if (taskList.length !== 0) {
+            let oldIds = taskList.map((item) => item.id);
+            return Math.max(...oldIds) + 1;  
+        } else {
+            return zeroId;
+        }
     }
     const addTask = (text) => {
         let id = newId();
