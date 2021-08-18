@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './HeaderComponent';
 import Footer from './FooterComponent';
 import NewTask from './NewTaskComponent';
@@ -6,7 +6,12 @@ import TaskList from './TaskListComponent';
 import Container from '@material-ui/core/Container';
 
 const Main = () => {
-    const [taskList, setTaskList] = useState([]);
+    const [taskList, setTaskList] = useState(() => {
+        const savedTasks = localStorage.getItem('data');
+        const initialValue = JSON.parse(savedTasks);
+        return initialValue || []
+    });
+
     const newId = () => {
         let zeroId = 0;
         if (taskList.length !== 0) {
@@ -15,7 +20,8 @@ const Main = () => {
         } else {
             return zeroId;
         }
-    }
+    };
+
     const addTask = (text) => {
         let id = newId();
         let taskObject = {
@@ -26,16 +32,23 @@ const Main = () => {
         let updatedTasks = [...taskList, taskObject];
         setTaskList(updatedTasks);
     };
+
     const toggleTask = (id) => {
         let updatedTasks = [...taskList];
         let targetIndex = updatedTasks.findIndex((item) => item.id === id);
         updatedTasks[targetIndex].complete = !taskList[targetIndex].complete;
         setTaskList(updatedTasks);
         };
+
     const deleteTask = (id) => {
         let updatedTasks = taskList.filter((item) => item.id !== id);
         setTaskList(updatedTasks);
     };
+
+    useEffect(() => {});
+
+    useEffect(() => {localStorage.setItem('data', JSON.stringify(taskList))}, [taskList]);
+
     return (
         <Container maxWidth='lg'>
             <Header />

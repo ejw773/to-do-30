@@ -18,7 +18,7 @@ const Footer = () => {
     return (
         <AppBar position='fixed' className={classes.footerBar}>
             <Toolbar>
-                <Typography style={{align: 'center'}}></Typography>
+                <Typography style={{align: 'center'}}>Day 8: Material-UI Take 2</Typography>
             </Toolbar>
         </AppBar>
     )
