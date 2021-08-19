@@ -8,24 +8,27 @@ import { Paper } from '@material-ui/core';
 const Main = () => {
     const [taskList, setTaskList] = useState([
         {
-            id: 0,
+            id: 5,
             task: 'deploy app',
             complete: false
         },
         {
-            id: 1,
+            id: 6,
             task: 'clean room',
             complete: true
         },
         {
-            id: 2,
+            id: 7,
             task: 'download update',
             complete:  false
         }
     ]);
 
     const toggleTask = (id) => {
-        console.log(`toggle task: ${id}`);
+        let targetIndex = taskList.findIndex((item) => item.id === id);
+        let updatedState = [...taskList];
+        updatedState[targetIndex].complete = !taskList[targetIndex].complete;
+        setTaskList(updatedState);
     };
 
     const addTask = (text) => {
@@ -33,7 +36,9 @@ const Main = () => {
     };
 
     const deleteTask = (id) => {
-        console.log(`delete ${id}`)
+        let copiedState = [...taskList];
+        let filteredState = copiedState.filter((item) => item.id !== id);
+        setTaskList(filteredState);
     }
 
     return (
@@ -50,7 +55,7 @@ const Main = () => {
             <TaskList taskList={taskList} toggleTask={toggleTask} deleteTask={deleteTask} />
             <Footer />
         </Paper>
-    )
-}
+        )
+    }
 
 export default Main;
