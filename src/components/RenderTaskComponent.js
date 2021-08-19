@@ -2,9 +2,9 @@ import React from 'react';
 import { List, ListItem, Checkbox, IconButton, ListItemText, ListItemSecondaryAction } from '@material-ui/core'
 import DeleteOutline from '@material-ui/icons/DeleteOutline'
 
-const RenderTask = ({task, toggleTask, deleteTask}) => {
+const RenderTask = ({task, toggleTask, deleteTask, divider}) => {
     return (
-        <ListItem divider={true}>
+        <ListItem divider={divider}>
             <Checkbox
                 onClick={() => toggleTask(task.id)}
                 checked={task.complete}
