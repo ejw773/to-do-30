@@ -1,9 +1,11 @@
 import React from 'react';
 import RenderTask from './RenderTaskComponent';
 
-const TaskList = () => {
+const TaskList = ({taskList, toggleTask, deleteTask}) => {
     return (
-        <div><RenderTask /></div>
+        <div>
+            {taskList.map((item) => <RenderTask key={item.id} task={item} toggleTask={toggleTask} deleteTask={deleteTask} />)}    
+        </div>
     )
 }
 

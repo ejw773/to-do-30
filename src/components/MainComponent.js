@@ -3,6 +3,7 @@ import Header from './HeaderComponent';
 import NewTask from './NewTaskComponent';
 import TaskList from './TaskListComponent';
 import Footer from './FooterComponent';
+import { Paper } from '@material-ui/core';
 
 const Main = () => {
     const [taskList, setTaskList] = useState([
@@ -36,12 +37,19 @@ const Main = () => {
     }
 
     return (
-        <React.Fragment>
+        <Paper
+            elevation={0}
+            style={{
+                padding: 0,
+                margin: 0,
+                backgroundColor: '#fafafa'
+            }}
+        >
             <Header />
             <NewTask addTask={addTask}/>
-            <TaskList tasklist={taskList} toggleTask={toggleTask} deleteTask={deleteTask} />
+            <TaskList taskList={taskList} toggleTask={toggleTask} deleteTask={deleteTask} />
             <Footer />
-        </React.Fragment>
+        </Paper>
     )
 }
 

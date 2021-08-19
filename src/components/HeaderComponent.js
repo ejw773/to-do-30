@@ -1,8 +1,19 @@
 import React from 'react';
+import { AppBar, Toolbar, Typography } from '@material-ui/core';
 
 const Header = () => {
     return (
-        <div>Header</div>
+        <AppBar
+            color='primary'
+            position='static'
+            style={{height: 64}}
+        >
+            <Toolbar
+                style={{height: 64}}
+            >
+                <Typography color='inherit'>To-Do 30</Typography>
+            </Toolbar>
+        </AppBar>
     )
 }
 
