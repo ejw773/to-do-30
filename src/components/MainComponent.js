@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Header from './HeaderComponent';
 import NewTask from './NewTaskComponent';
 import TaskList from './TaskListComponent';
-// import Footer from './FooterComponent';
+import Footer from './FooterComponent';
 import { Paper } from '@material-ui/core';
 
 const Main = () => {
@@ -79,7 +79,7 @@ const Main = () => {
             <Header />
             <NewTask addTask={addTask}/>
             <TaskList taskList={taskList} toggleTask={toggleTask} deleteTask={deleteTask} />
-            {/* <Footer /> */}
+            <Footer />
         </Paper>
         )
     }

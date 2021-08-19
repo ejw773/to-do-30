@@ -1,8 +1,16 @@
 import React from 'react';
+import { Container, Box, Grid, Link } from '@material-ui/core'
+
 
 const Footer = () => {
     return (
-        <div>Footer</div>
+        <footer>
+            <Box>
+                <Container maxWidth='lg'>
+                    <Grid>hey</Grid>
+                </Container>
+            </Box>
+        </footer>
     )
 }
 
