@@ -38,6 +38,11 @@ const projectInfo = [
         day: 8,
         title: 'Material-UI: Take 2',
         comment: "Today I did a second try at Material-UI. It's even slimmer than yesterday's, but I'm tired today."
+    },
+    {
+        day: 9,
+        title: 'Material-UI is Here to Stay',
+        comment: "After polling some developers, I came to the conclusion that I should switch from Bootstrap to Material-UI for the rest of the project. For today's entry, I focused on duplicating a blog post's styling of a similar app."
     }
 ];
 
