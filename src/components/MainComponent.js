@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Header from './HeaderComponent';
 import NewTask from './NewTaskComponent';
 import TaskList from './TaskListComponent';
-import Footer from './FooterComponent';
+// import Footer from './FooterComponent';
 import { Paper } from '@material-ui/core';
 
 const Main = () => {
@@ -31,8 +31,23 @@ const Main = () => {
         setTaskList(updatedState);
     };
 
+    const newId = () => {
+        let newId = 0;
+        let oldIds = taskList.map((item) => item.id);
+        if (oldIds.length > 0) {
+            newId = Math.max(...oldIds) + 1;
+        };
+        return newId;
+    }
+
     const addTask = (text) => {
-        console.log(`new tsak: ${text}`);
+        let id = newId();
+        let newObject = {
+            id: id,
+            task: text,
+            complete: false
+        };
+        setTaskList(prev => [...taskList, newObject])
     };
 
     const deleteTask = (id) => {
@@ -40,6 +55,17 @@ const Main = () => {
         let filteredState = copiedState.filter((item) => item.id !== id);
         setTaskList(filteredState);
     }
+
+    useEffect(() => {
+        const data = localStorage.getItem('data');
+        if (data) {
+            setTaskList(JSON.parse(data))
+        }
+    }, []);
+
+    useEffect(() => {
+        localStorage.setItem('data', JSON.stringify(taskList));
+    });
 
     return (
         <Paper
@@ -53,7 +79,7 @@ const Main = () => {
             <Header />
             <NewTask addTask={addTask}/>
             <TaskList taskList={taskList} toggleTask={toggleTask} deleteTask={deleteTask} />
-            <Footer />
+            {/* <Footer /> */}
         </Paper>
         )
     }

@@ -8,7 +8,14 @@ const TaskList = ({taskList, toggleTask, deleteTask}) => {
             { taskList.length > 0 && (
             <Paper style={{margin: 16}}>
                 <List>
-                    {taskList.map((item) => <RenderTask key={item.id} task={item} toggleTask={toggleTask} deleteTask={deleteTask} divider={true} />)}    
+                    {taskList.map((item, index) => 
+                        <RenderTask 
+                            key={item.id} 
+                            task={item} 
+                            toggleTask={toggleTask} 
+                            deleteTask={deleteTask} 
+                            divider={index !== taskList.length - 1} 
+                    />)}    
                 </List>
             </Paper>
             )}
