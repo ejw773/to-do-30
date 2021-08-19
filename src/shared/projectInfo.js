@@ -37,7 +37,7 @@ const projectInfo = [
     {
         day: 8,
         title: 'Material-UI: Take 2',
-        comment: "Today I did a second try at Material-UI; the first attempt had some real problems."
+        comment: "Today I did a second try at Material-UI. It's even slimmer than yesterday's, but I'm tired today."
     }
 ];
 
