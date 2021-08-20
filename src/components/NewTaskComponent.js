@@ -46,7 +46,7 @@ const NewTask = ({addTask}) => {
                         fullWidth
                     />
                 </Grid>
-                <Grid xs={2} md={1} item>
+                <Grid xs={1} md={1} item>
                     <Button
                         fullWidth
                         color='secondary'
