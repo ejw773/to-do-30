@@ -65,7 +65,7 @@ const Main = () => {
             <Header />
             <AddTask addItem={addItem}/>
             <TaskList taskList={taskList} toggleItem={toggleItem} deleteItem={deleteItem} addCategory={addCategory} deleteCategory={deleteCategory} changeName={changeName} />
-            <Footer />
+            {/* <Footer /> */}
         </React.Fragment>
     )
 }

@@ -11,7 +11,7 @@ function App() {
       style={{
         margin: 0,
         padding: 0,
-        backgroundImage: `url(${Ocean})`,
+        backgroundImage: `url(https://todo30.com/10/ocean.jpg)`,
         backgroundPosition: 'center',
         height: `100vh`
       }}

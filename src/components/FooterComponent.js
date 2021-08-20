@@ -1,8 +1,11 @@
 import React from 'react';
+import { BottomNavigation } from '@material-ui/core';
 
 const Footer = () => {
     return (
-        <div>Footer</div>
+        <BottomNavigation value={'Code'}>
+
+        </BottomNavigation>
     )
 }
 
