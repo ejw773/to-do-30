@@ -3,16 +3,26 @@ import { List, ListItem, Checkbox, IconButton, ListItemText, ListItemSecondaryAc
 import DeleteOutlined from '@material-ui/icons/DeleteOutlined'
 
 const RenderTask = ({ task, toggleItem, divider, deleteItem, addCategory, deleteCategory, changeName }) => {
-    const handleToggle = (id) => {
-        toggleItem(id);
+    const handleToggle = () => {
+        toggleItem(task.id);
     };
+    const handleClick = () => {
+        deleteItem(task.id);
+    }
 
     return (
         <ListItem divider={divider}>
             <Checkbox  
                 checked={task.complete}
-                onClick={() => {handleToggle(task.id)}}
+                onClick={handleToggle}
+                disableRipple
             />
+            <ListItemText primary={task.name} />
+            <ListItemSecondaryAction>
+                <IconButton aria-label='Delete Task' onClick={handleClick}>
+                    <DeleteOutlined/>
+                </IconButton>
+            </ListItemSecondaryAction>
         </ListItem>
     )
 }

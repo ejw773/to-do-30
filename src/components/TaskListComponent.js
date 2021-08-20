@@ -6,8 +6,8 @@ const TaskList = ({taskList, toggleItem, deleteItem, addCategory, deleteCategory
     return (
         <React.Fragment>
             {taskList.length > 0 && (
-                <Paper>
-                    <List style={{ overflow: 'scroll'}}>
+                <Paper style={{margin: 16}}>
+                    <List >
                         {taskList.map((item, index) => (
                         <RenderTask 
                             key={item.id} 

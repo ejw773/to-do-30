@@ -7,34 +7,17 @@ import Footer from './FooterComponent';
 
 const Main = () => {
     const [categoryList, setCategoryList] = useState(['Office', 'Home', 'Inbox', 'Shopping']);
-    const [taskList, setTaskList] = useState([
-        {
-            id: 0,
-            name: 'Clean up desk',
-            category: 'Office',
-            complete: false
-        },
-        {
-            id: 2,
-            name: 'Change spark plugs',
-            category: 'Home',
-            complete: true
-        },
-        {
-            id: 10,
-            name: 'Buy LaCroix',
-            category: 'Shopping',
-            complete: false
-        }
-    ]);
+    const [taskList, setTaskList] = useState([]);
 
     const newId = () => {
         let allIds = taskList.map((item) => item.id);
-        console.log(allIds);
+        let newId = Math.max(...allIds) + 1;
+        return newId;
     };
 
     const deleteItem = (id) => {
-        console.log(`delete: ${id}`)
+         let s = taskList.filter(item => item.id !== id);
+        setTaskList(s);
     };
 
     const toggleItem = (id) => {
@@ -46,7 +29,14 @@ const Main = () => {
 
     const addItem = (text) => {
         let id = newId();
-        console.log(`new task: ${text} with id: ${id}`)
+        let newObject = {
+            id: id,
+            name: text,
+            category: 'Inbox',
+            complete: false
+        };
+        let updatedTasks = [...taskList, newObject];
+        setTaskList(updatedTasks);
     };
 
     const addCategory = (text) => {
@@ -63,13 +53,12 @@ const Main = () => {
 
     useEffect(() => {
         let data = JSON.parse(localStorage.getItem('data'));
-        console.log(data);
         setTaskList(data);
     }, []);
 
     useEffect(() => {
         localStorage.setItem('data', JSON.stringify(taskList))
-    }, []);
+    });
 
     return (
         <React.Fragment>
