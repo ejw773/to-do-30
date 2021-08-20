@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
-import { List, ListItem, Checkbox, IconButton, ListItemText, ListItemSecondaryAction } from '@material-ui/core';
+import React from 'react';
+import { ListItem, Checkbox, IconButton, ListItemText, ListItemSecondaryAction } from '@material-ui/core';
 import DeleteOutlined from '@material-ui/icons/DeleteOutlined'
 
-const RenderTask = ({ task, toggleItem, divider, deleteItem, addCategory, deleteCategory, changeName }) => {
-    const [taskText, setTaskText] = useState(task.name);
-
-    const modifyTask = (e) => {
-        console.log(e);
+const RenderTask = ({ task, toggleItem, divider, deleteItem }) => {
+    let lineStyle = 'incomplete';
+    if (task.complete) {
+        lineStyle = 'completed';
     }
 
     const handleToggle = () => {
@@ -23,7 +22,7 @@ const RenderTask = ({ task, toggleItem, divider, deleteItem, addCategory, delete
                 onClick={handleToggle}
                 disableRipple
             />
-            <ListItemText primary={taskText} onChange={modifyTask} />
+            <ListItemText className={lineStyle} primary={task.name} />
             <ListItemSecondaryAction>
                 <IconButton aria-label='Delete Task' onClick={handleClick}>
                     <DeleteOutlined/>
@@ -34,3 +33,4 @@ const RenderTask = ({ task, toggleItem, divider, deleteItem, addCategory, delete
 }
 
 export default RenderTask;
+

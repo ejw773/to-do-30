@@ -1,7 +1,6 @@
 import './App.css';
 import Main from './components/MainComponent';
 import { Paper } from '@material-ui/core';
-import Ocean from './img/ocean.jpg';
 
 function App() {
   return (

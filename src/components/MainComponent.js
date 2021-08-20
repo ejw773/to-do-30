@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { Paper } from '@material-ui/core';
 import Header from './HeaderComponent';
 import AddTask from './AddTaskComponent';
 import TaskList from './TaskListComponent'
-import Footer from './FooterComponent';
 
 const Main = () => {
-    const [categoryList, setCategoryList] = useState(['Office', 'Home', 'Inbox', 'Shopping']);
     const [taskList, setTaskList] = useState([]);
 
     const newId = () => {
-        let allIds = taskList.map((item) => item.id);
-        let newId = Math.max(...allIds) + 1;
+        let newId = 0;
+        if (taskList.length > 0) {
+            let allIds = taskList.map((item) => item.id);
+            newId = Math.max(...allIds) + 1;
+        }
         return newId;
     };
 
@@ -21,8 +21,8 @@ const Main = () => {
     };
 
     const toggleItem = (id) => {
-        const targetIndex = taskList.findIndex((item) => item.id === id);
         const s = [...taskList];
+        const targetIndex = taskList.findIndex((item) => item.id === id);
         s[targetIndex].complete = !s[targetIndex].complete;
         setTaskList(s);
     };
@@ -39,18 +39,6 @@ const Main = () => {
         setTaskList(updatedTasks);
     };
 
-    const addCategory = (text) => {
-        console.log(`add category: ${text}`)
-    };
-
-    const deleteCategory = (text) => {
-        console.log(`delete category: ${text}`)
-    };
-
-    const changeName = (text, id) => {
-        console.log(`change: ${id} to: ${text}`)
-    };
-
     useEffect(() => {
         let data = JSON.parse(localStorage.getItem('data'));
         setTaskList(data);
@@ -64,8 +52,7 @@ const Main = () => {
         <React.Fragment>
             <Header />
             <AddTask addItem={addItem}/>
-            <TaskList taskList={taskList} toggleItem={toggleItem} deleteItem={deleteItem} addCategory={addCategory} deleteCategory={deleteCategory} changeName={changeName} />
-            {/* <Footer /> */}
+            <TaskList taskList={taskList} toggleItem={toggleItem} deleteItem={deleteItem} />
         </React.Fragment>
     )
 }

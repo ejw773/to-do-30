@@ -1,5 +1,5 @@
 import React from 'react';
-import { List, Paper, Grid } from '@material-ui/core';
+import { List, Paper } from '@material-ui/core';
 import RenderTask from './RenderTaskComponent';
 
 const TaskList = ({taskList, toggleItem, deleteItem, addCategory, deleteCategory, changeName}) => {
