@@ -43,6 +43,11 @@ const projectInfo = [
         day: 9,
         title: 'Material-UI is Here to Stay',
         comment: "After polling some developers, I came to the conclusion that I should switch from Bootstrap to Material-UI for the rest of the project. For today's entry, I focused on duplicating a blog post's styling of a similar app."
+    },
+    {
+        day: 10,
+        title: 'Material-UI: Getting Comfortable',
+        comment: "I'm starting to get comfortable with Material-UI - but how to organize the page is still a little mysterious to me. I'd like to add categories to the to-do list, but it may be some time before I'm able to handle all the pieces needed."
     }
 ];
 
