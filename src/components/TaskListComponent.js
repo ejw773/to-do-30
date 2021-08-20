@@ -1,15 +1,25 @@
 import React from 'react';
 import { List, Paper, Grid } from '@material-ui/core';
 import RenderTask from './RenderTaskComponent';
-import { identifier, isTemplateLiteral } from '@babel/types';
 
-const TaskList = ({taskList}) => {
+const TaskList = ({taskList, toggleItem, deleteItem, addCategory, deleteCategory, changeName}) => {
     return (
         <React.Fragment>
             {taskList.length > 0 && (
                 <Paper>
                     <List style={{ overflow: 'scroll'}}>
-                        {taskList.map((item) => (<RenderTask key={item.id} task={item}/>))}
+                        {taskList.map((item, index) => (
+                        <RenderTask 
+                            key={item.id} 
+                            divider={index !== taskList.length - 1}
+                            task={item}
+                            toggleItem={toggleItem}
+                            deleteItem={deleteItem}
+                            addCategory={addCategory}
+                            deleteCategory={deleteCategory}
+                            changeName={changeName}
+                            />
+                        ))}
                     </List>
                 </Paper> 
             )}

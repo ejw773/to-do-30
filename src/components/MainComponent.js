@@ -18,7 +18,7 @@ const Main = () => {
             id: 2,
             name: 'Change spark plugs',
             category: 'Home',
-            complete: false
+            complete: true
         },
         {
             id: 10,
@@ -31,16 +31,35 @@ const Main = () => {
     const newId = () => {
         let allIds = taskList.map((item) => item.id);
         console.log(allIds);
-    }
+    };
 
     const deleteItem = (id) => {
         console.log(`delete: ${id}`)
     };
 
+    const toggleItem = (id) => {
+        const targetIndex = taskList.findIndex((item) => item.id === id);
+        const s = [...taskList];
+        s[targetIndex].complete = !s[targetIndex].complete;
+        setTaskList(s);
+    };
+
     const addItem = (text) => {
         let id = newId();
         console.log(`new task: ${text} with id: ${id}`)
-    }
+    };
+
+    const addCategory = (text) => {
+        console.log(`add category: ${text}`)
+    };
+
+    const deleteCategory = (text) => {
+        console.log(`delete category: ${text}`)
+    };
+
+    const changeName = (text, id) => {
+        console.log(`change: ${id} to: ${text}`)
+    };
 
     useEffect(() => {
         let data = JSON.parse(localStorage.getItem('data'));
@@ -55,8 +74,8 @@ const Main = () => {
     return (
         <React.Fragment>
             <Header />
-            <AddTask />
-            <TaskList taskList={taskList}/>
+            <AddTask addItem={addItem}/>
+            <TaskList taskList={taskList} toggleItem={toggleItem} deleteItem={deleteItem} addCategory={addCategory} deleteCategory={deleteCategory} changeName={changeName} />
             <Footer />
         </React.Fragment>
     )
