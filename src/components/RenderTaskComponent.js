@@ -6,7 +6,7 @@ import CheckIcon from '@material-ui/icons/Check';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import DeleteIcon from '@material-ui/icons/Delete';
 
-const RenderTask = ({task}) => {
+const RenderTask = ({task, index}) => {
     const dispatch = useDispatch();
     let buttonColor = 'inherit';
     let buttonIcon = <CheckIcon/>;
@@ -19,7 +19,7 @@ const RenderTask = ({task}) => {
         <ListItem>
             <Button 
                 color={buttonColor}
-                onClick={() => dispatch(toggleTask(task.id))}
+                onClick={() => dispatch(toggleTask(index))}
             >{buttonIcon}</Button>
             <ListItemText>{task.name}</ListItemText>
             <Button onClick={() => dispatch(deleteTask(task.id))}><DeleteIcon/></Button>

@@ -9,7 +9,7 @@ const TaskList = () => {
         <Paper>
             {taskList.map((item, index) => {
                 return (
-                    <RenderTask task={item} key={index} />
+                    <RenderTask task={item} key={index} index={index} />
                 )
             })}
         </Paper>
