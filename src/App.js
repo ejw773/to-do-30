@@ -1,24 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import Main from './components/MainComponent';
+import { Paper } from '@material-ui/core';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Paper 
+      className="App"
+      elevation={0}
+      style={{
+        margin: 0,
+        padding: 0,
+        backgroundImage: `url(https://todo30.com/10/ocean.jpg)`,
+        backgroundPosition: 'center',
+        height: `100vh`
+      }}
+    >
+      <Main />
+    </Paper>
   );
 }
 
