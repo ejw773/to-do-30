@@ -1,9 +1,7 @@
 import React, { useState} from 'react';
 import RenderTask from './RenderTaskComponent';
-import { useSelector, useDispatch } from 'react-redux';
-import { toggleTask, deleteTask } from '../features/taskList/taskListSlice';
+import { useSelector } from 'react-redux';
 import { Paper } from '@material-ui/core';
-
 
 const TaskList = () => {
     const taskList = useSelector((state) => state.taskList);
@@ -11,7 +9,7 @@ const TaskList = () => {
         <Paper>
             {taskList.map((item, index) => {
                 return (
-                    <RenderTask task={item} key={index} toggleTask={toggleTask} deleteTask={deleteTask} />
+                    <RenderTask task={item} key={index} />
                 )
             })}
         </Paper>

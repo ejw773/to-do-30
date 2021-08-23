@@ -24,7 +24,8 @@ export const taskListSlice = createSlice({
             console.log(`toggle: ${action.payload}`)
         },
         deleteTask: (state, action) => {
-            console.log(`delete: ${action.payload}`)
+            console.log(state.filter(item => item.id !== action.payload));
+            
         },
         addTask: (state, action) => {
             console.log(`add task: ${action.payload}`)

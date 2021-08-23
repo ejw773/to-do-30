@@ -1,10 +1,13 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { toggleTask, deleteTask } from '../features/taskList/taskListSlice';
 import { ListItem, ListItemText, Button } from '@material-ui/core'
 import CheckIcon from '@material-ui/icons/Check';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import DeleteIcon from '@material-ui/icons/Delete';
 
-const RenderTask = ({task, toggleTask, deleteTask}) => {
+const RenderTask = ({task}) => {
+    const dispatch = useDispatch();
     let buttonColor = 'inherit';
     let buttonIcon = <CheckIcon/>;
     if (task.complete) {
@@ -14,9 +17,12 @@ const RenderTask = ({task, toggleTask, deleteTask}) => {
     
     return (
         <ListItem>
-            <Button color={buttonColor}>{buttonIcon}</Button>
+            <Button 
+                color={buttonColor}
+                onClick={() => dispatch(toggleTask(task.id))}
+            >{buttonIcon}</Button>
             <ListItemText>{task.name}</ListItemText>
-            <Button><DeleteIcon/></Button>
+            <Button onClick={() => dispatch(deleteTask(task.id))}><DeleteIcon/></Button>
         </ListItem>
     )
 }
