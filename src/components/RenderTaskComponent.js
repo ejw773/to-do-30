@@ -8,11 +8,13 @@ import DeleteIcon from '@material-ui/icons/Delete';
 
 const RenderTask = ({task, index}) => {
     const dispatch = useDispatch();
+    let textStyle = 'incomplete';
     let buttonColor = 'inherit';
     let buttonIcon = <CheckIcon/>;
     if (task.complete) {
         buttonColor = 'primary';
         buttonIcon = <CheckCircleIcon/>;
+        textStyle = 'completed';
     }
     
     return (
@@ -21,7 +23,7 @@ const RenderTask = ({task, index}) => {
                 color={buttonColor}
                 onClick={() => dispatch(toggleTask(index))}
             >{buttonIcon}</Button>
-            <ListItemText>{task.name}</ListItemText>
+            <ListItemText className={textStyle}>{task.name}</ListItemText>
             <Button onClick={() => dispatch(deleteTask(task.id))}><DeleteIcon/></Button>
         </ListItem>
     )

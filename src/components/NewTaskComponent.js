@@ -7,16 +7,24 @@ const NewTask = () => {
     const [userInput, setUserInput] = useState('');
     const dispatch = useDispatch();
     const taskList = useSelector((state) => state.tasks.taskList);
+    let newId = 0;
     let allIds = taskList.map(item => item.id);
-    let newId = Math.max(...allIds) + 1;
+    if (allIds.length > 0) {
+        newId = Math.max(...allIds) + 1;
+    }
     const handleChange = ({target}) => {
         setUserInput(target.value);
     };
     const handleKeyPress = ({key}) => {
-        console.log(key);
+        if (key === 'Enter') {
+            handleClick();
+        }
     };
-    const handleClick = (e) => {
-        dispatch(addTask({userInput, newId}));
+    const handleClick = () => {
+        if (userInput !== '') {
+            dispatch(addTask({userInput, newId}));
+            setUserInput('');    
+        }
     }
     return (
         <Paper style={{margin: 16, padding: 16}}>

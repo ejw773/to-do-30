@@ -5,7 +5,6 @@ import { Paper } from '@material-ui/core';
 
 const TaskList = () => {
     const taskList = useSelector((state) => state.tasks.taskList);
-    console.log(taskList);
     return (
         <Paper>
             {taskList.map((item, index) => {
