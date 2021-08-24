@@ -3,7 +3,7 @@ import taskListReducer from '../features/taskList/taskListSlice';
 
 export default configureStore({
     reducer: {
-        taskList: taskListReducer
+        tasks: taskListReducer
     },
 });
 

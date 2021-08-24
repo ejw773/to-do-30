@@ -1,34 +1,40 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 export const taskListSlice = createSlice({
-    name: 'taskList',
-    initialState: [
-        {
-            id: 0,
-            name: 'wash the cat',
-            complete: false
-        },
-        {
-            id: 1,
-            name: 'make some tea',
-            complete: true
-        },
-        {
-            id: 9,
-            name: 'write an app',
-            complete: false
-        }
-    ],
+    name: 'tasks',
+    initialState: {
+        taskList: [
+            {
+                id: 0,
+                name: 'wash the cat',
+                complete: false
+            },
+            {
+                id: 1,
+                name: 'make some tea',
+                complete: true
+            },
+            {
+                id: 9,
+                name: 'write an app',
+                complete: false
+            }
+        ]
+    },
     reducers: {
         toggleTask: (state, action) => {
-            console.log(`toggle: ${action.payload}`)
+            state.taskList[action.payload].complete = !state.taskList[action.payload].complete;
         },
         deleteTask: (state, action) => {
-            console.log(state.filter(item => item.id !== action.payload));
-            
+            state.taskList = state.taskList.filter(item => item.id !== action.payload);
         },
         addTask: (state, action) => {
-            console.log(`add task: ${action.payload}`)
+            let newTask = {
+                id: action.payload.newId,
+                name: action.payload.userInput,
+                complete: false
+            };
+            state.taskList = [...state.taskList, newTask];
         }
     }
 })
