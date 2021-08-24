@@ -51,8 +51,8 @@ const projectInfo = [
     },
     {
         day: 11,
-        title: 'something',
-        comment: "something
+        title: 'Redux at Last!',
+        comment: "Today I finally got Redux into the To-Do app. With hooks and toolkit, it's far easier than in the past (no more connect() and mapStateToProps and mapDispatchToProps and on and on). However, I did not get around to localStorage. Maybe tomorrow."
     }
 ];
 
