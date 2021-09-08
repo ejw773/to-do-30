@@ -48,6 +48,11 @@ const projectInfo = [
         day: 10,
         title: 'Material-UI: Getting Comfortable',
         comment: "I'm starting to get comfortable with Material-UI - but how to organize the page is still a little mysterious to me. I'd like to add categories to the to-do list, but it may be some time before I'm able to handle all the pieces needed."
+    },
+    {
+        day: 11,
+        title: 'Redux at Last!',
+        comment: "Today I finally got Redux into the To-Do app. With hooks and toolkit, it's far easier than in the past (no more connect() and mapStateToProps and mapDispatchToProps and on and on). However, I did not get around to localStorage. Maybe tomorrow."
     }
 ];
 
