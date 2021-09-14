@@ -53,6 +53,11 @@ const projectInfo = [
         day: 11,
         title: 'Redux at Last!',
         comment: "Today I finally got Redux into the To-Do app. With hooks and toolkit, it's far easier than in the past (no more connect() and mapStateToProps and mapDispatchToProps and on and on). However, I did not get around to localStorage. Maybe tomorrow."
+    },
+    {
+        day: 12,
+        title: 'Back in the Saddle',
+        comment: "After weeks away, I'm back. And I forgot a lot. Sadly, today really is my first real 'copy' of the previous iteration. But I am happy to report that no copy/paste was used."
     }
 ];
 
