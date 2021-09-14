@@ -10,7 +10,7 @@ const Main = () => {
             <Header />
             <AddTask />
             <TaskList />
-            <Footer />
+            {/* <Footer /> */}
         </React.Fragment>
     )
 }
