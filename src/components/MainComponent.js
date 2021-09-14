@@ -1,8 +1,17 @@
 import React from 'react';
+import Header from './HeaderComponent';
+import Footer from './FooterComponent';
+import AddTask from './AddTaskComponent';
+import TaskList from './TaskListComponent';
 
 const Main = () => {
     return (
-        <div>Main Component</div>
+        <React.Fragment>
+            <Header />
+            <AddTask />
+            <TaskList />
+            <Footer />
+        </React.Fragment>
     )
 }
 

@@ -1,8 +1,11 @@
 import React from 'react';
+import RenderTask from './RenderTaskComponent';
 
 const TaskList = () => {
     return (
-        <div>Task List</div>
+        <React.Fragment>
+            <RenderTask />
+        </React.Fragment>
     )
 }
 
