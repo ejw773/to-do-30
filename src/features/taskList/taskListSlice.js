@@ -1,22 +1,25 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = [
-    {
-        name: 'Wash the cat',
-        complete: false,
-        id: 0
-    },
-    {
-        name: 'Read a book',
-        complete: true,
-        id: 1
-    },
-    {
-        name: 'Make a video',
-        complete: false,
-        id: 2
-    }
-]
+const initialState = {
+    taskList: [
+        {
+            name: 'Wash the cat',
+            complete: false,
+            id: 0
+        },
+        {
+            name: 'Read a book',
+            complete: true,
+            id: 1
+        },
+        {
+            name: 'Make a video',
+            complete: false,
+            id: 2
+        }
+    
+    ]
+}
 
 export const taskListSlice = createSlice({
     name: 'tasks',
