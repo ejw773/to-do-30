@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import taskListSlice, { addTask } from '../features/taskList/taskListSlice';
+import { addTask } from '../features/taskList/taskListSlice';
 import { Paper, TextField, Button, Grid } from '@material-ui/core';
 import { useSelector, useDispatch } from 'react-redux';
 

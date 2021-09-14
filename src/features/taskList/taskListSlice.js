@@ -37,7 +37,7 @@ export const taskListSlice = createSlice({
                 name: action.payload.userInput,
                 complete: false
             };
-            state.taskList = {...state.taskList, newTask};
+            state.taskList = [...state.taskList, newTask];
         },
     }
 })
