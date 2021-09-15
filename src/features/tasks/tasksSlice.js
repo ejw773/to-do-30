@@ -25,7 +25,8 @@ export const taskSlice = createSlice({
     initialState,
     reducers: {
         toggle: (state, action) => {
-            state.taskList[action.payload].complete = !state.taskList[action.payload].complete
+            let targetTask = state.taskList.find((item) => item.id === action.payload);
+            targetTask.complete = !targetTask.complete;
         },
         addTask: (state, action) => {
             let newTask = {
@@ -39,7 +40,8 @@ export const taskSlice = createSlice({
             state.taskList = state.taskList.filter((item) => item.id !== action.payload);
         },
         modifyTask: (state, action) => {
-            state.taskList[action.payload.index].name = action.payload.name;
+            let targetTask = state.taskList.find((item) => item.id === action.payload.id)
+            targetTask.name = action.payload.name;
         }
     }
 });

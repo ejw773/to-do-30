@@ -21,7 +21,7 @@ const RenderTask = ({index, task}) => {
     };
 
     const handleChange = ({target}) => {
-        let changedData = {index: index, name: target.value};
+        let changedData = {id: task.id, name: target.value};
         dispatch(modifyTask(changedData));
     }
 
@@ -29,7 +29,7 @@ const RenderTask = ({index, task}) => {
         <Row className="justify-content-md-center">
             <Col className={displayClass}>
                 <InputGroup>
-                <Button variant='light' onClick={() => dispatch(toggle(index))}>{displayIcon}</Button>
+                <Button variant='light' onClick={() => dispatch(toggle(task.id))}>{displayIcon}</Button>
                 <FormControl 
                     value={task.name}
                     onChange={handleChange}

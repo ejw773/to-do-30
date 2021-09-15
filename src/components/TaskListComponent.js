@@ -11,7 +11,7 @@ const TaskList = () => {
     return (
         <Container className='p-3 task-list'>
         {sortedTasks.length > 0 &&
-        taskList.map((item, index) => 
+        sortedTasks.map((item, index) => 
         <RenderTask 
             key={index}
             index={index}
