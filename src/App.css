@@ -1,11 +1,4 @@
-/* .App {
-    background: url('./img/tree.jpg') no-repeat center center fixed;
-    background-size: cover;
-    height: 100%;
-    overflow: hidden;
-    height: 100vh
-}
- */
+
 .finished {
     text-decoration: line-through;
 }
@@ -27,4 +20,8 @@
     margin: auto; 
     min-width: 50%;
     min-height: 50%;
+}
+
+.new-task {
+    margin-top: 50px;
 }

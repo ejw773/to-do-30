@@ -8,9 +8,9 @@ const Main = () => {
     return (
         <div>
             <Header />
+            <Footer />
             <NewTask />
             <TaskList />
-            <Footer />
         </div>
     )
 }

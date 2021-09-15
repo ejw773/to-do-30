@@ -1,8 +1,11 @@
 import React from 'react';
+import { Navbar } from 'react-bootstrap';
 
 const Footer = () => {
     return (
-        <div></div>
+        <Navbar fixed='bottom'>
+            something
+        </Navbar>
     )
 }
 

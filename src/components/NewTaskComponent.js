@@ -34,7 +34,7 @@ const NewTask = () => {
     };
 
     return (
-        <Row className="justify-content-md-center">
+        <Row className="justify-content-md-center new-task">
             <Col md={4}>
             <InputGroup className="p-3">
                 <FormControl
