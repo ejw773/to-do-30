@@ -1,7 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = {
-    tasks: [
+const initialState = [
         {
             id: 0,
             name: 'Wash the cat',
@@ -18,7 +17,7 @@ const initialState = {
             complete: false
         }
     ]
-}
+
 
 export const taskSlice = createSlice({
     name: 'tasks',

@@ -1,12 +1,13 @@
 import React from 'react';
 import Main from './components/MainComponent';
 import './App.css';
+import { Container } from 'react-bootstrap';
 
 const App = () => {
     return (
-        <div className="App">
+        <Container className="App">
             <Main />
-        </div>
+        </Container>
     )
 }
 
