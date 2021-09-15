@@ -36,7 +36,7 @@ const NewTask = () => {
     return (
         <Row className="justify-content-md-center">
             <Col md={4}>
-            <InputGroup>
+            <InputGroup className="p-3">
                 <FormControl
                 placeholder="Enter New Task"
                 aria-label="Add New Task"

@@ -25,7 +25,8 @@ export const taskSlice = createSlice({
     initialState,
     reducers: {
         toggle: (state, action) => {
-            console.log(`dispatched: ${JSON.stringify(action.payload)}`);
+            console.log(state.taskList[action.payload]);
+            state.taskList[action.payload].complete = !state.taskList[action.payload].complete
         },
         addTask: (state, action) => {
             let newTask = {
@@ -36,7 +37,6 @@ export const taskSlice = createSlice({
             state.taskList = [...state.taskList, newTask];
         },
         deleteTask: (state, action) => {
-            console.log(`dispatched: ${action.payload}`);
             state.taskList = state.taskList.filter((item) => item.id !== action.payload);
         },
         modifyTask: (state, action) => {
