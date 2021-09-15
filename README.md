@@ -4,7 +4,7 @@ The "To Do App" is the classic exercise in learning web development. This challe
 
 ## Day 13: [One Step Back, Two Steps Forward](https://todo30.com/13/)
 
-I reverted to Bootstrap today, so that instead of strugging with Material-UI's layout, I could focus on Redux Toolkit. The Toolkit really does simplify setting up Redux.
+Yesterday I started a project, and didn't finish before midnight. I took on too much with trying to learn Redux-Toolkit and Material-UI at the same time. So today I reverted to Bootstrap, and focused on Redux-Toolkit - especially saving to local storage.
 
 ## [Video Introduction](https://youtu.be/rQr4AVyOf5o)
 
