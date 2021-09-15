@@ -1,28 +1,36 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Row, Col, InputGroup, FormControl, Button } from 'react-bootstrap';
-import { newTask } from '../features/tasks/tasksSlice'
+import { addTask } from '../features/tasks/tasksSlice'
 import generateId from './idGenerator';
 
 const NewTask = () => {
-    const taskList = useSelector(state => state.tasks)
+    const tasks = useSelector(state => state.taskSlice)
+    const taskList = tasks.taskList;
     const [userInput, setUserInput] = useState('')
+    const dispatch = useDispatch();
+
     const handleChange = ({target}) => {
         setUserInput(target.value)
     };
 
-    const handleKeyPress = () => {
-        console.log('key press')
+    const handleKeyPress = ({key}) => {
+        if (key === 'Enter') {
+            createNewTask();
+        }
     };
 
     const createNewTask = () => {
-        let newId = generateId(taskList);
-        let newTask = {
-            id: newId,
-            name: {userInput},
-            complete: false
+        if (userInput !== '') {
+            let newId = generateId(taskList);
+            let newTask = {
+                id: newId,
+                name: userInput,
+                complete: false
+            }
+            dispatch(addTask(newTask));
+            setUserInput('');
         }
-        console.log(newTask)
     };
 
     return (

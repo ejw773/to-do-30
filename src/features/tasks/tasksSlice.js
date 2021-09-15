@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = [
+const initialState = {
+    taskList: [
         {
             id: 0,
             name: 'Wash the cat',
@@ -16,7 +17,7 @@ const initialState = [
             name: 'Drink more coffee',
             complete: false
         }
-    ]
+    ]};
 
 
 export const taskSlice = createSlice({
@@ -24,20 +25,26 @@ export const taskSlice = createSlice({
     initialState,
     reducers: {
         toggle: (state, action) => {
-            console.log(action.payload);
+            console.log(`dispatched: ${JSON.stringify(action.payload)}`);
         },
-        newTask: (state, action) => {
-            console.log(action.payload);
+        addTask: (state, action) => {
+            let newTask = {
+                name: action.payload.name,
+                id: action.payload.id,
+                complete: false
+            };
+            state.taskList = [...state.taskList, newTask];
         },
         deleteTask: (state, action) => {
-            console.log(action.payload);
+            console.log(`dispatched: ${action.payload}`);
+            state.taskList = state.taskList.filter((item) => item.id !== action.payload);
         },
         modifyTask: (state, action) => {
-            console.log(action.payload);
+            console.log(`dispatched: ${action.payload}`);
         }
     }
 });
 
-export const { toggle, newTask, deleteTask, modifyTask } = taskSlice.actions;
+export const { toggle, addTask, deleteTask, modifyTask } = taskSlice.actions;
 
 export default taskSlice.reducer;

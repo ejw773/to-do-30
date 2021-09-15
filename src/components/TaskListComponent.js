@@ -4,7 +4,9 @@ import { useSelector } from 'react-redux'
 import { Container } from 'react-bootstrap';
 
 const TaskList = () => {
-    const taskList = useSelector(state => state.tasks)
+    const tasks = useSelector(state => state.taskSlice)
+    const taskList = tasks.taskList;
+    console.log(taskList);
     return (
         <Container>
         {taskList.length > 0 &&
