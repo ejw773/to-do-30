@@ -40,7 +40,8 @@ export const taskSlice = createSlice({
             state.taskList = state.taskList.filter((item) => item.id !== action.payload);
         },
         modifyTask: (state, action) => {
-            console.log(`dispatched: ${action.payload}`);
+            console.log(`dispatched: ${JSON.stringify(action.payload)}`);
+            state.taskList[action.payload.index].name = action.payload.name;
         }
     }
 });
