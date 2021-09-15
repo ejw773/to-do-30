@@ -39,13 +39,13 @@ const RenderTask = ({index, task}) => {
         <Row className="justify-content-md-center">
             <Col className={displayClass}>
                 <InputGroup>
-                <Button variant={displayColor} onClick={() => dispatch(toggle(index))}>{displayIcon}</Button>
+                <Button variant='light' outline onClick={() => dispatch(toggle(index))}>{displayIcon}</Button>
                 <FormControl 
                     value={task.name}
                     onChange={handleChange}
                     // onKeyPress={handleKeyPress}
                 />
-                <Button variant='danger' onClick={() => dispatch(deleteTask(task.id))}>{trashCan}</Button>
+                <Button variant='light' onClick={() => dispatch(deleteTask(task.id))}>{trashCan}</Button>
                 </InputGroup>
             </Col>
         </Row>

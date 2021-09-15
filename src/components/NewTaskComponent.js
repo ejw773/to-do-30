@@ -45,8 +45,8 @@ const NewTask = () => {
                 onChange={handleChange}
                 onKeyPress={handleKeyPress}
                 />
-                <Button onClick={() => createNewTask()}>
-                    +
+                <Button variant='light' onClick={() => createNewTask()}>
+                    <h3>+</h3>
                 </Button>
             </InputGroup>
             </Col>

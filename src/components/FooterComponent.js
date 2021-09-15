@@ -1,10 +1,12 @@
 import React from 'react';
-import { Navbar } from 'react-bootstrap';
+import { Navbar, Container } from 'react-bootstrap';
 
 const Footer = () => {
     return (
-        <Navbar fixed='bottom'>
-            something
+        <Navbar fixed='bottom' variant='light' bg='light'>
+            <Container>
+                <Navbar.Text>Day 13: One Step Back, Two Steps Forward</Navbar.Text>
+            </Container>
         </Navbar>
     )
 }
