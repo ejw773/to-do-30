@@ -11,7 +11,7 @@ const Jumbotron = () => {
             <div className="row justify-content-center">
                 <div className="col-12 col-md-8 col-sm-8">
                     <div className="ratio ratio-16x9">
-                    <iframe title='intro-video' src="https://www.youtube.com/embed/rQr4AVyOf5o" allowfullscreen></iframe>
+                    <iframe title='intro-video' src="https://www.youtube.com/embed/rQr4AVyOf5o" allowFullScreen></iframe>
                     </div>
                 </div>
             </div>

@@ -58,6 +58,11 @@ const projectInfo = [
         day: 12,
         title: 'Back in the Saddle',
         comment: "After weeks away, I'm back. And I forgot a lot. Sadly, today really is my first real 'copy' of the previous iteration. But I am happy to report that no copy/paste was used."
+    },
+    {
+        day: 13,
+        title: 'One Step Back, Two Steps Forward',
+        comment: "Yesterday I started a project, and didn't finish before midnight. I took on too much with trying to learn Redux-Toolkit and Material-UI at the same time. So today I reverted to Bootstrap, and focused on Redux-Toolkit - especially saving to local storage."
     }
 ];
 
