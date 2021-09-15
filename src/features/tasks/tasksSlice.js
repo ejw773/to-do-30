@@ -25,13 +25,12 @@ export const taskSlice = createSlice({
     initialState,
     reducers: {
         toggle: (state, action) => {
-            console.log(state.taskList[action.payload]);
             state.taskList[action.payload].complete = !state.taskList[action.payload].complete
         },
         addTask: (state, action) => {
             let newTask = {
-                name: action.payload.name,
                 id: action.payload.id,
+                name: action.payload.name,
                 complete: false
             };
             state.taskList = [...state.taskList, newTask];
@@ -40,7 +39,6 @@ export const taskSlice = createSlice({
             state.taskList = state.taskList.filter((item) => item.id !== action.payload);
         },
         modifyTask: (state, action) => {
-            console.log(`dispatched: ${JSON.stringify(action.payload)}`);
             state.taskList[action.payload.index].name = action.payload.name;
         }
     }
