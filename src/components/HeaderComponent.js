@@ -3,7 +3,7 @@ import { Navbar } from  'react-bootstrap';
 
 const Header = () => {
     return (
-        <Navbar bg='light' variant='light'>
+        <Navbar bg='dark' variant='dark'>
             <Navbar.Brand>#ToDo30</Navbar.Brand>
         </Navbar>
     )

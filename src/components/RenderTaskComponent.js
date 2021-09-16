@@ -2,24 +2,17 @@ import React from 'react';
 import { Button, InputGroup, FormControl } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
 import { BsTrash, BsCircle, BsCheckCircle } from 'react-icons/bs';
-import { toggleTask, modifyTask, deleteTask } from '../features/tasks/tasksSlice';
+import { deleteTask, toggleTask, modifyTask } from '../features/tasks/tasksSlice';
 
 const RenderTask = ({task}) => {
-
     const dispatch = useDispatch();
 
-    const toggleTask = () => {
-//        console.log(`toggle task: ${task.id}`)
-        dispatch(toggleTask());
-    };
-
-    const deleteTask = () => {
-        //console.log(`delete task: ${task.id}`);
-        dispatch(deleteTask(task.id))
-    };
-
     const handleChange = ({target}) => {
-        console.log(target.value)
+        let payloadData = {
+            id: task.id,
+            name: target.value
+        }
+        dispatch(modifyTask(payloadData))
     };
 
     let checkIcon = <BsCircle />
@@ -29,14 +22,14 @@ const RenderTask = ({task}) => {
 
     return (
         <InputGroup>
-            <Button variant='light' onClick={() => dispatch(toggleTask)}>
+            <Button variant='light' onClick={() => dispatch(toggleTask(task.id))}>
                 {checkIcon}
             </Button>
             <FormControl 
                 value={task.name}            
                 onChange={handleChange}
             />
-            <Button variant='light' onClick={deleteTask}>
+            <Button variant='light' onClick={() => dispatch(deleteTask(task.id))}>
                 <BsTrash/>
             </Button>
         </InputGroup>

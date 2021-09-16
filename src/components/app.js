@@ -8,7 +8,7 @@ const App = () => {
     return (
         <Container className="App">
             <div id="bg">
-                <img src={Image}/>
+                <img src={Image} alt='background'/>
             </div>
             <Main />
 

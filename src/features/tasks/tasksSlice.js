@@ -25,16 +25,18 @@ export const taskListSlice = createSlice({
     initialState,
     reducers: {
         addTask: (state, action) => {
-            console.log('add task')
+            state.taskList = [...state.taskList, action.payload]
         },
         deleteTask: (state, action) => {
-            console.log('delete task')
+            state.taskList = state.taskList.filter((item) => item.id !== action.payload);
         },
         toggleTask: (state, action) => {
-            console.log('toggle task')
+            let targetTask = state.taskList.find((item) => item.id === action.payload);
+            targetTask.complete = !targetTask.complete;
         },
         modifyTask: (state, action) => {
-            console.log('modify task')
+            let targetTask = state.taskList.find((item) => item.id === action.payload.id);
+            targetTask.name = action.payload.name;
         },
     }
 });
