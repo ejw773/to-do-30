@@ -77,7 +77,8 @@ const projectInfo = [
         bullets: [
             "Used bootstrap-icons instead of FontAwesome",
             "Easily re-implemented yesterday's Redux setup (without referring to yesterday's project)",
-            "Tinkered with react-bootstrap-drawer, but did not use it"
+            "Tinkered with react-bootstrap-drawer, but did not use it",
+            "For the landing page, tried react-back-to-top-button, but ended up not using it"
         ]
     }
 ];
