@@ -4,6 +4,7 @@ import { Row, Col, FormControl, InputGroup, Button } from 'react-bootstrap'
 import generateId from './idGenerator';
 import { useState } from 'react';
 import { addTask } from '../features/tasks/tasksSlice';
+import { MdAddCircle } from 'react-icons/md'
 
 const NewTask = () => {
     const dispatch = useDispatch();
@@ -37,11 +38,12 @@ const NewTask = () => {
             <Col>
                 <InputGroup>
                     <FormControl
+                        placeholder='Enter New Task'
                         value={userInput}
                         onChange={handleChange}
                         onKeyPress={handleKeyPress}
                     />
-                    <Button onClick={addToTasks}>+</Button>
+                    <Button variant='light' onClick={addToTasks}><MdAddCircle /></Button>
                 </InputGroup>
             </Col>
         </Row>

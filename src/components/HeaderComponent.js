@@ -1,10 +1,14 @@
 import React from 'react';
-import { Navbar } from  'react-bootstrap';
+import { Navbar, Container, Row, Col } from  'react-bootstrap';
 
 const Header = () => {
     return (
+
         <Navbar bg='dark' variant='dark'>
-            <Navbar.Brand>#ToDo30</Navbar.Brand>
+            <Container>
+                <Navbar.Brand href="https://todo30.com/">ToDo30.com</Navbar.Brand>
+                <Navbar.Text className="justify-content-right">Day 14: Redux Remixed</Navbar.Text>
+            </Container>
         </Navbar>
     )
 }

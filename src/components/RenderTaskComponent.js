@@ -21,7 +21,7 @@ const RenderTask = ({task}) => {
     };
 
     return (
-        <InputGroup>
+        <InputGroup className='p-1'>
             <Button variant='light' onClick={() => dispatch(toggleTask(task.id))}>
                 {checkIcon}
             </Button>
