@@ -1,8 +1,9 @@
 import React from 'react';
-import { Card } from 'react-bootstrap';
+import { Card, ListGroup } from 'react-bootstrap';
 import { baseUrl, gitBaseUrl } from '../shared/baseUrl';
+import RenderList from './RenderList';
 
-const RenderCards = ({title, day, comment}) => {
+const RenderCards = ({title, day, comment, bullets}) => {
     let dayString = day.toString();
     let adjustedDayString;
     let gitDayString;
@@ -16,12 +17,20 @@ const RenderCards = ({title, day, comment}) => {
     const linkString = baseUrl + adjustedDayString;
     const gitLinkString = gitBaseUrl + gitDayString;
     return (
-        <Card>
-            <Card.Header>Day: {day}</Card.Header>
+        <Card className='day-card'>
+            <Card.Header as='h5'>Day: {day}</Card.Header>
             <Card.Body>
                 <Card.Title>{title}</Card.Title>
-                <Card.Subtitle><a href={linkString}>Live Site</a> | <a href={gitLinkString} target="_blank" rel="noreferrer">Code</a></Card.Subtitle>
                 <Card.Text>{comment}</Card.Text>
+            </Card.Body>
+            <ListGroup variant='flush'>
+                {
+                    bullets &&
+                    bullets.map((item) => <RenderList key={item} bullet={item} />)
+                }
+            </ListGroup>
+            <Card.Body>
+                <Card.Subtitle><a href={linkString}>Live Site</a> | <a href={gitLinkString} target="_blank" rel="noreferrer">Code</a></Card.Subtitle>
             </Card.Body>
         </Card>
     )

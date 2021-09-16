@@ -62,7 +62,23 @@ const projectInfo = [
     {
         day: 13,
         title: 'One Step Back, Two Steps Forward',
-        comment: "Yesterday I started a project, and didn't finish before midnight. I took on too much with trying to learn Redux-Toolkit and Material-UI at the same time. So today I reverted to Bootstrap, and focused on Redux-Toolkit - especially saving to local storage."
+        comment: "Yesterday I started a project, and didn't finish before midnight. I took on too much with trying to learn Redux-Toolkit and Material-UI at the same time. So today I reverted to Bootstrap, and focused on Redux-Toolkit - especially saving to local storage.",
+        bullets: [
+            "Used local storage to persist Redux, using redux-persist",
+            "Experimented with more ways to place and center a static background image (including lots of ways that didn't work!)",
+            "Struggled with - and overcame - issues with updating an object within an array, selected by id, inside of createSlice()",
+            "Sorted tasks based on whether or not complete"
+        ]
+    },
+    {
+        day: 14,
+        title: 'Redux Remixed',
+        comment: "What a thrilling day! I stayed primarily focused on Redux, and am now getting quite comfortable with Redux Toolkit.",
+        bullets: [
+            "Used bootstrap-icons instead of FontAwesome",
+            "Easily re-implemented yesterday's Redux setup (without referring to yesterday's project)",
+            "Tinkered with react-bootstrap-drawer, but did not use it"
+        ]
     }
 ];
 

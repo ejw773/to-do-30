@@ -7,7 +7,7 @@ import { faCheckDouble } from '@fortawesome/free-solid-svg-icons'
 
 const Header = () => {
     return (
-        <Navbar bg='dark' variant='dark' expand='sm'>
+        <Navbar bg='dark' variant='dark' expand='sm' fixed='top'>
         <Container>
             <Navbar.Brand><FontAwesomeIcon icon={faCheckDouble} /></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />

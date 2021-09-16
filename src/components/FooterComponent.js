@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <Navbar bg='dark' variant='dark'>
         <Container className='justify-content-center'>
-            <Navbar.Brand>More to Come</Navbar.Brand>
+            <Navbar.Brand href='#top'>Back to Top</Navbar.Brand>
         </Container>
     </Navbar>
 
