@@ -13,7 +13,6 @@ What a thrilling day! I stayed primarily focused on Redux, and am now getting qu
 - For the landing page, tried react-back-to-top-button, but ended up not using it
 - Added accordion to landing page for bullet points
 
-
 Today's Background Image from [Pixabay](https://pixabay.com/photos/nature-waters-lake-island-3082832/)
 
 ## [Video Introduction](https://youtu.be/rQr4AVyOf5o)
