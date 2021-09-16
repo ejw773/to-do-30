@@ -17,7 +17,7 @@ A Few of Today's New Things:
 - Struggled with - and overcame - issues with updating an object within an array, selected by id, inside of createSlice()
 
 - Sorted tasks based on whether or not complete
-- 
+
 ## [Video Introduction](https://youtu.be/rQr4AVyOf5o)
 
 Today's Image: [from Pixabay](https://pixabay.com/photos/tree-sunset-clouds-sky-silhouette-736885/)
