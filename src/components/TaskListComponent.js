@@ -8,9 +8,9 @@ const TaskList = () => {
     const taskList = useSelector(state => state.taskListSlice.taskList);
     let organizedTasks = organizeTasks(taskList);
     return (
-        <Container>
+        <Container className='task-list'>
             {taskList.length > 0 && 
-            taskList.map((item) => <RenderTask key={item.id} id={item.id} task={item} />)
+            organizedTasks.map((item) => <RenderTask key={item.id} id={item.id} task={item} />)
             }
         </Container>
     )

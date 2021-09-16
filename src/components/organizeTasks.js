@@ -1,6 +1,7 @@
 const organizeTasks = (tasks) => {
-    // tasks.sort((a, b) => (a.complete) ? 1 : -1);
-    return tasks;
+    let organizedTasks = [...tasks]
+    organizedTasks.sort((a, b) => a.complete - b.complete);
+    return organizedTasks;
 }
 
 export default organizeTasks;

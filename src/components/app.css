@@ -20,3 +20,11 @@
     min-width: 50%;
     min-height: 50%;
   }
+
+  .new-task {
+    margin-top: 50px;
+  }
+
+  .task-list {
+    margin-bottom: 100px;
+  }

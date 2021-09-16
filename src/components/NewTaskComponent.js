@@ -34,7 +34,7 @@ const NewTask = () => {
     }
 
     return (
-        <Row className='p-3'>
+        <Row className='p-3 new-task'>
             <Col>
                 <InputGroup>
                     <FormControl
