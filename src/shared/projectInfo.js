@@ -78,7 +78,7 @@ const projectInfo = [
             "Used bootstrap-icons instead of FontAwesome",
             "Easily re-implemented yesterday's Redux setup (without referring to yesterday's project)",
             "Tinkered with react-bootstrap-drawer, but did not use it",
-            "For the landing page, tried react-back-to-top-button, but ended up not using it",
+            "For the landing page, tried react-back-to-top-button, but ended up not using it; id='top' in conjunction with href='#top' works just fine (no need to get fancy)",
             "Added accordion to landing page for bullet points"
         ]
     }
