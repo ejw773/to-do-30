@@ -1,17 +1,54 @@
+
 .header {
     overflow: hidden;
-    background-color: crimson;
+    background-color: #DCA47D;
     padding: 20px, 10px;
+    margin-bottom: 20px;
 }
 
 .header a {
     float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
 }
 
-.logo {
+.header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
 
+.header a:hover {
+    background-color: #7EB5DD;
+    color: black;
 }
 
 .header-right {
     float: right;
 }
+
+
+@media screen and (min-width: 500px)  {
+    .header a {
+        margin-left: 100px;
+    }
+    .header-right {
+        margin-right: 100px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .header a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    
+    .header-right {
+      float: none;
+    }
+  }

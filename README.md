@@ -9,8 +9,11 @@ We're going retro today with no CSS libraries. It's pretty hideous!
 ## Today's Reflections
 - Array methods (filter, find, map) are becoming second nature
 - Using hooks has become easy
-- 
+- I keep coming back to [this site])(https://edvins.io/how-to-use-redux-persist-with-redux-toolkit) for help with setting up redux-persist
+- After hearing about it for a long time, I finally used [Coolors](https://coolors.co/) for selecting a color scheme
+- For help with the header, I revisited a site I hadn't been to in a long time: [W3Schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_responsive_header)
 
+## Today's background image from [Pixabay](https://pixabay.com/photos/abstract-smoke-background-swirl-69124/)
 
 ## [Video Introduction](https://youtu.be/rQr4AVyOf5o)
 

@@ -11,11 +11,53 @@ body {
 }
 
 .finished {
-    background-color: green;
-    color: white;
+    background-color: #B5DD7E;
 }
 
 .unfinished {
-    background-color: red;
+    background-color: #DCA47D;
 }
 
+.add-task {
+    background-color: #7EB5DD;  
+}
+
+.delete-task {
+    background-color: #A67EDD;
+}
+
+.input-box {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.new-task-group {
+    margin-bottom: 20px;
+}
+
+.input-box {
+    width: 600px;
+    font-size: 16px;
+}
+
+.task-list {
+    margin-bottom: 90px;
+}
+
+@media screen and (max-width: 800px) {
+    .input-box {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .input-box {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .input-box {
+        width: 150px;
+    }
+}

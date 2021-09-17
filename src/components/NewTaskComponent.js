@@ -38,14 +38,15 @@ const NewTask = () => {
     }
 
     return (
-        <div>
+        <div className='new-task-group'>
             <input 
                 value={userInput}
                 onChange={handleChange}
                 onKeyPress={handleKeyPress}
                 placeholder='Enter New Task'
+                className='input-box'
             />
-            <button onClick={handleClick}>+</button>
+            <button className="add-task" onClick={handleClick}>+</button>
         </div>
     )
 }

@@ -21,11 +21,14 @@ const RenderTask = ({task}) => {
     return (
         <div className='task'>
             <button className={statusClass} onClick={() => dispatch(toggleTask(task.id))}>&#10004;</button>
+            <label for='task'></label>
             <input 
                 value={task.name}
                 onChange={handleChange}
+                className='input-box'
+                id='task'
             />
-           <button onClick={() => dispatch(deleteTask(task.id))}>🗑️</button>
+           <button className='delete-task' onClick={() => dispatch(deleteTask(task.id))}>🗑️</button>
         </div>
     )
 }
