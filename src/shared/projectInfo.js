@@ -90,6 +90,19 @@ const projectInfo = [
             "Added accordion to landing page for bullet points",
             "Discovered that react-bootstrap does not have built-in sidebar functionality"
         ]
+    },
+    {
+        day: 15,
+        title: 'Ugly Retro',
+        comment: "What a hideous version this turned out to be. I decided to forego a CSS library entirely, and this is what I ended up with.",
+        bullets: [
+            "No CSS library, which is why it looks so bad",
+            "Array methods (filter, find, map) are becoming second nature",
+            "Using hooks has become easy",
+            "After hearing about it for a long time, I finally used Coolors for selecting a color scheme",
+            "For help with the responsive header, I revisited a site I hadn't been to in a long time: W3Schools",
+            "Wow this thing looks awful"
+        ]
     }
 ];
 
