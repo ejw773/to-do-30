@@ -1,0 +1,17 @@
+.header {
+    overflow: hidden;
+    background-color: crimson;
+    padding: 20px, 10px;
+}
+
+.header a {
+    float: left;
+}
+
+.logo {
+
+}
+
+.header-right {
+    float: right;
+}
