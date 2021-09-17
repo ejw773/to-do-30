@@ -8,6 +8,7 @@
 
 .finished {
     background-color: green;
+    color: white;
 }
 
 .unfinished {

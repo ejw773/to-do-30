@@ -14,13 +14,15 @@ const NewTask = () => {
     };
 
     const addThisTask = () => {
-        let newId = generateId(allIds);
-        let newTask = {
-            id: newId,
-            name: userInput,
-            complete: false
-        };
-        dispatch(addTask(newTask))
+        if (userInput !== '') {
+            let newId = generateId(allIds);
+            let newTask = {
+                id: newId,
+                name: userInput,
+                complete: false
+            };
+            dispatch(addTask(newTask))  
+        }
     }
 
     const handleKeyPress = ({key}) => {
