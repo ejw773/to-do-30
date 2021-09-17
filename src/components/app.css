@@ -1,3 +1,15 @@
 .App {
     text-align: center
 }
+
+.task {
+    padding: 5px;
+}
+
+.finished {
+    background-color: green;
+}
+
+.unfinished {
+    background-color: red;
+}

@@ -1,17 +1,31 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { deleteTask, toggleTask, modifyTask } from '../features/tasks/tasksSlice'
 
 const RenderTask = ({task}) => {
+    const dispatch = useDispatch();
+
     const handleChange = ({target}) => {
-        console.log(target.value)
+        let modifiedTask = {
+            id: task.id,
+            name: target.value
+        }
+        dispatch(modifyTask(modifiedTask))
     }
+
+    let statusClass = 'unfinished'
+    if (task.complete) {
+        statusClass = 'finished'
+    }
+
     return (
-        <div>
-            <button>&#10004;</button>
+        <div className='task'>
+            <button className={statusClass} onClick={() => dispatch(toggleTask(task.id))}>&#10004;</button>
             <input 
                 value={task.name}
                 onChange={handleChange}
             />
-           <button>Delete</button>
+           <button onClick={() => dispatch(deleteTask(task.id))}>🗑️</button>
         </div>
     )
 }

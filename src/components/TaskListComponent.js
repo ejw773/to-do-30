@@ -4,7 +4,6 @@ import { useSelector } from 'react-redux';
 
 const TaskList = () => {
     const taskList = useSelector(state => state.taskSlice.tasks);
-    console.log(taskList);
     return (
         <div>
             {
