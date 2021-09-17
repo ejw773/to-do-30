@@ -52,12 +52,20 @@ const projectInfo = [
     {
         day: 11,
         title: 'Redux at Last!',
-        comment: "Today I finally got Redux into the To-Do app. With hooks and toolkit, it's far easier than in the past (no more connect() and mapStateToProps and mapDispatchToProps and on and on). However, I did not get around to localStorage. Maybe tomorrow."
+        comment: "Today I finally got Redux into the To-Do app. With hooks and toolkit, it's far easier than in the past. However, I did not get around to localStorage. Maybe tomorrow.",
+        bullets: [
+            'Was thrilled to discover no need for connect, mapStateToProps, or mapDispatchToProps',
+            'Looked into persisting to local storage, and it was not as simple as I had hoped'
+        ]
     },
     {
         day: 12,
         title: 'Back in the Saddle',
-        comment: "After weeks away, I'm back. And I forgot a lot. Sadly, today really is my first real 'copy' of the previous iteration. But I am happy to report that no copy/paste was used."
+        comment: "After weeks away, I'm back. And I forgot a lot. Sadly, today really is my first real 'copy' of the previous iteration. But I am happy to report that no copy/paste was used.",
+        bullets: [
+            'Continued using Material-UI',
+            'No background image today'
+        ]
     },
     {
         day: 13,
@@ -79,7 +87,8 @@ const projectInfo = [
             "Easily re-implemented yesterday's Redux setup (without referring to yesterday's project)",
             "Tinkered with react-bootstrap-drawer, but did not use it",
             "For the landing page, tried react-back-to-top-button, but ended up not using it; id='top' in conjunction with href='#top' works just fine (no need to get fancy)",
-            "Added accordion to landing page for bullet points"
+            "Added accordion to landing page for bullet points",
+            "Discovered that react-bootstrap does not have built-in sidebar functionality"
         ]
     }
 ];
