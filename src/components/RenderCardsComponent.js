@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, ListGroup, Accordion } from 'react-bootstrap';
+import { Card, ListGroup, Accordion, Button } from 'react-bootstrap';
 import { baseUrl, gitBaseUrl } from '../shared/baseUrl';
 import RenderList from './RenderList';
 
@@ -36,7 +36,7 @@ const RenderCards = ({title, day, comment, bullets}) => {
                             }
                         </ListGroup>
                         <Card.Body>
-                            <Card.Subtitle><a href={linkString} target="_blank" rel="noreferrer">Live Site</a> | <a href={gitLinkString} target="_blank" rel="noreferrer">Code</a></Card.Subtitle>
+                            <Button variant='dark' href={linkString} target="_blank" rel="noreferrer">Live Site</Button>  <Button variant='secondary' href={gitLinkString} target="_blank" rel="noreferrer">Code</Button>
                         </Card.Body>
                     </Accordion.Body>
                 </Accordion.Item>

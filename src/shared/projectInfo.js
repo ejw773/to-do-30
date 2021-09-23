@@ -99,7 +99,7 @@ const projectInfo = [
             "No CSS library, which is why it looks so bad",
             "Array methods (filter, find, map) are becoming second nature",
             "Using hooks has become easy",
-            "After hearing about it for a long time, I finally used Coolors for selecting a color scheme",
+            "After hearing about it for a long time, I finally used Coolors.co for selecting a color scheme",
             "For help with the responsive header, I revisited a site I hadn't been to in a long time: W3Schools",
             "Wow this thing looks awful"
         ]
