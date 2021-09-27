@@ -34,3 +34,4 @@ Add as many or as few features as wanted. Redux? Sure. Backend? Great. Awesome s
 * Extra Bonus: Write up bullet points to summarize your reflections on that day's app.
 
 ![To-Do 30](https://github.com/ejw773/to-do-30/blob/main/public/to-do-30-flattened.png)
+
