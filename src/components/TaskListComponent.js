@@ -3,13 +3,12 @@ import Row from 'react-bootstrap/Row';
 import RenderTask from './RenderTaskComponent'
 
 
-const TaskList = ({ tasks }) => {
-  const theTasks = ['do something', 'do something else', 'do something more']
+const TaskList = ({ toDoList, deleteToDo, toggleToDo }) => {
   return (
     <Row>
-      {theTasks.map((task) => {
+      {toDoList.map((task, index) => {
         return (
-          <RenderTask key={task} task={task} />
+          <RenderTask key={index} task={task} toDoList={toDoList} deleteToDo={deleteToDo} toggleToDo={toggleToDo} />
       )})}
     </Row>
   )

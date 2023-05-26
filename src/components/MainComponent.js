@@ -5,17 +5,17 @@ import Col from 'react-bootstrap/Col';
 import NewTask from './NewTaskComponent';
 import TaskList from './TaskListComponent';
 
-const Main = () => {
+const Main = ({ toDoList, addToDo, deleteToDo, toggleToDo }) => {
   return (
     <Container>
       <Row>
         <Col>
-          <NewTask />
+          <NewTask addToDo={addToDo} />
         </Col>
       </Row>
       <Row>
         <Col>
-          <TaskList />
+          <TaskList toDoList={toDoList} deleteToDo={deleteToDo} toggleToDo={toggleToDo} />
         </Col>
       </Row>
     </Container>
