@@ -114,6 +114,17 @@ const projectInfo = [
             "Did manage to get Bootstrap installed for the nav bar",
             "As on Day 1, I got it done before breakfast! So that's sometehing I guess."
         ]
+    },
+    {
+        day: 17,
+        title: 'Still Brushing Up',
+        comment: "Today I dug a little bit more into react-bootstrap, making the site look somewhat reasonable. I also did more with organizing state better.",
+        bullets: [
+            "Worked at remembering how I organized state with hooks",
+            "Polished up appearance with react-bootstrap",
+            "Had to depend on react-bootstrap docs, as well as looking at previous projects",
+            "Looked back at what I did in early iterations, and wished I could still do cool stuff like that"
+        ]
     }
 ];
 
