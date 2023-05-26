@@ -11,7 +11,7 @@ function Header() {
         <Navbar.Collapse className="justify-content-end">
           <Nav className="justify-content-end">
             <Nav.Link href="https://todo30.com/">Home</Nav.Link>
-            <Nav.Link href="https://github.com/ejw773/to-do-30">GitHub</Nav.Link>
+            <Nav.Link href="https://github.com/ejw773/to-do-30">Source Code</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

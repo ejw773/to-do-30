@@ -9,7 +9,7 @@ const NewTask = ({ addToDo }) => {
     setUserInput(e.target.value);
   }
   const handleSubmit = () => {
-    if (userInput != '') {
+    if (userInput !== '') {
       addToDo(userInput);
       setUserInput('');
     }

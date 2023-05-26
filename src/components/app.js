@@ -27,7 +27,6 @@ const App = () => {
     let newId = 0;
     if (toDoList.length >= 1) {
       let allIds = toDoList.map((item) => item.id);
-      console.log(allIds);
       newId = Math.max(...allIds) + 1;
     }
     return newId;
@@ -45,13 +44,13 @@ const App = () => {
   } 
 
   const deleteToDo = (id) => {
-    const newList = toDoList.filter((item) => item.id != id)
+    const newList = toDoList.filter((item) => item.id !== id)
     setToDoList(newList);
   }
 
   const toggleToDo = (id) => {
     const updatedList = [...toDoList];
-    let targetIndex = updatedList.findIndex((item) => item.id == id);
+    let targetIndex = updatedList.findIndex((item) => item.id === id);
     updatedList[targetIndex].status = !updatedList[targetIndex].status;
     setToDoList(updatedList);
   }
