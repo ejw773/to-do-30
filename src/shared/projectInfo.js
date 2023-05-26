@@ -103,6 +103,17 @@ const projectInfo = [
             "For help with the responsive header, I revisited a site I hadn't been to in a long time: W3Schools",
             "Wow this thing looks awful"
         ]
+    },
+    {
+        day: 16,
+        title: 'I Forgot Everything',
+        comment: "Due to working with a different tech stack, I haven't touched React in nearly a year. It seems I've forgotten everything. Today was just a matter of looking through previous code, remembering how React works, and getting something, no matter how awful, to work.",
+        bullets: [
+            "Re-read code from last year to remember how React even works",
+            "Re-created Day 1's awful app just to get something working and deployed",
+            "Did manage to get Bootstrap installed for the nav bar",
+            "As on Day 1, I got it done before breakfast! So that's sometehing I guess."
+        ]
     }
 ];
 
